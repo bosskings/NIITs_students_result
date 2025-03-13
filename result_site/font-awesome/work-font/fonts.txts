@@ -1,0 +1,52 @@
+arrows
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+lisence
+<i class="fa fa-id-card-o" aria-hidden="true"></i>
+
+cloud
+<i class="fa fa-cloud" aria-hidden="true"></i>
+
+form
+<i class="fa fa-wpforms" aria-hidden="true"></i>
+
+<i class="fa fa-wpbeginner" aria-hidden="true"></i>
+
+
+
+
+<!-- <ul>
+				<li>
+					<img src="imgs/logo/nike-logo.png" width="50px" height="25px">
+				</li>
+
+				<li> <a href="#">New & Featured</a> </li>
+
+				<li> <a href="#">Men</a> </li>
+
+				<li> <a href="#">Women</a> </li>
+
+				<li> <a href="#">Kids</a> </li>
+
+				<li> <a href="#">Sale</a> </li>
+
+				<li> <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a> </li>
+
+				<li> <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a> </li>
+
+				<li>
+					<form>
+						<a href="#"><i class="fa fa-search" aria-hidden="true" for="search"></i></a>
+						<input type="search" name="" id="search">
+					</form>
+				</li>
+			</ul> -->
+
+
+
+
+<!-- Soclias -->
+
+<i class="fa fa-instagram" aria-hidden="true"></i>
+<i class="fa fa-facebook-square" aria-hidden="true"></i>
