@@ -6,15 +6,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/encore', function () {
     return view("encore/index");
 });
 
-
-Route::get('/register', function () {
+Route::get('/encore/register', function () {
     return view('encore.registration');
 });
 
-Route::post('/profile', function(){
+Route::get('/encore/profile', function(){
     return view('encore.profile');
+});
+
+Route::post('/encore/register', function () {
+    return view('encore.registration');
 });
