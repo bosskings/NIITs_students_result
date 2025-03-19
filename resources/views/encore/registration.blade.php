@@ -16,7 +16,7 @@
 		<div class="nav col-12">
 			<div class="logo col-1">
 				<div class="logo_hold">
-					<a href="/"><img src="{{ asset('images/niit-logo.png') }}" class="logo"></a>
+					<a href="/encore"><img src="{{ asset('images/niit-logo.png') }}" class="logo"></a>
 				</div>
 			</div>
 
@@ -25,7 +25,7 @@
 			</div>
 
 			<div class="register">
-				<a href="/register">Register Student</a>
+				<a href="/encore/register">Register Student</a>
 			</div>
 		</div>
 
@@ -34,7 +34,7 @@
 			<div class="form-container col-4 .col-esd-11">
 			<h2>Student Registration Form</h2>
 
-			<form method="POST" action="/register"> 
+			<form method="POST" action="/encore/register"> 
 				@csrf
 
 				<div class="form-group">

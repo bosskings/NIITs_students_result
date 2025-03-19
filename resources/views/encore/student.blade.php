@@ -15,7 +15,7 @@
 
 		<div class="nav">
 			<div class="logo_hold">
-				<a href="index.html"><img src="assets/imgs/niit-logo.png" class="logo"></a>
+				<a href="/encore"><img src="assets/imgs/niit-logo.png" class="logo"></a>
 			</div>
 
 			<div class="encor">
@@ -23,7 +23,7 @@
 			</div>
 
 			<div class="register">
-				<a href="/register">Register Student</a>
+				<a href="/encore/register">Register Student</a>
 			</div>
 
 		</div>
