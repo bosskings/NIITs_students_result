@@ -14,7 +14,7 @@
 
 		<div class="nav">
 			<div class="logo_hold">
-				<a href="/"><img src="{{ asset("images/niit-logo.png") }}" class="logo"></a>
+				<a href="/encore"><img src="{{ asset("images/niit-logo.png") }}" class="logo"></a>
 			</div>
 
 			<div class="encor">
@@ -30,7 +30,7 @@
 			<div class="search_container col-6 col-ld-9 col-esd-11">
 
 				<input class="search_bar col-10 col-ld-9 col-esd-10" type="text" name="search" placeholder="Student REG.NO">
-				<a href="/profile" id="submit" class="col-2 col-ld-3 col-esd-2">GO</a>
+				<a href="/encore/profile" id="submit" class="col-2 col-ld-3 col-esd-2">GO</a>
 				
 			</div>
 			<!-- <h1>Search for student re</h1> -->
