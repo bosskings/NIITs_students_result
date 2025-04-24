@@ -1,41 +1,33 @@
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-		{{-- <link rel="stylesheet" type="text/css" href="css/landing.css">
-		<link rel="stylesheet" type="text/css" href="css/nav_logo.css"> --}}
+<x-layout>
+	@vite('resources/css/nav_logo.css')
+	@vite(['resources/css/landing.css'])
 
-		@vite('resources/css/landing.css')
-		@vite('resources/css/nav_logo.css')
-	</head>
-	<body>
+	<div class="search_wrapper">
+		<div class="search_container col-6 col-ld-9 col-esd-11">
+			
+			<form action="{{route('encore.searchStudents')}}" method="GET" class="search_container col-12">
 
-		<div class="nav">
-			<div class="logo_hold">
-				<a href="/encore"><img src="{{ asset("images/niit-logo.png") }}" class="logo"></a>
-			</div>
+				@csrf
+				<input class="search_bar col-10 col-ld-9 col-esd-10" type="text" name="search_string" placeholder="Student Details" autocomplete="off">
+				{{-- <a href="/encore/profile" id="submit" class="col-2 col-ld-3 col-esd-2">GO</a> --}}
 
-			<div class="encor">
-				ENCORE RESULTS
-			</div>
-
-			<div class="register">
-				<a href="register">Register Student</a>
-			</div>
+				<button id="submit" class="col-2 col-ld-3 col-esd-2">GO</button>
+			</form>
+			
 		</div>
 
-		<div class="search_wrapper">
-			<div class="search_container col-6 col-ld-9 col-esd-11">
-
-				<input class="search_bar col-10 col-ld-9 col-esd-10" type="text" name="search" placeholder="Student REG.NO">
-				<a href="/encore/profile" id="submit" class="col-2 col-ld-3 col-esd-2">GO</a>
-				
-			</div>
-			<!-- <h1>Search for student re</h1> -->
+		<div class="search_result" >
+			
+			@if ( !isset($students) || $students->isEmpty())
+			{{ "not found" }}
+			@else
+			{{ $students[0]->first_name}}
+			
+			@endif
+			
 		</div>
+	</div>
 
-
-	</body>
-</html>
+	@vite('resources/js/app.js')
+	
+</x-layout>

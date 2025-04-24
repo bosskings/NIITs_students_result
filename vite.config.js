@@ -12,7 +12,9 @@ export default defineConfig({
                 'resources/css/reg.css',
                 'resources/css/student_d.css', 
             
-                'resources/js/app.js'
+                'resources/js/app.js',
+                'resources/js/result.js',
+                'resources/js/validate.js'
             ],
             refresh: true,
         }),

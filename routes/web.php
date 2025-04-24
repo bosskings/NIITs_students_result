@@ -3,16 +3,18 @@
 use App\Http\Controllers\StudentDetailController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/encore', function () {
     return view("encore/index");
 });
 
-Route::get('/encore/register', [StudentDetailController::class, 'viewRegisteration']);
+//auto complete for the form 
+Route::get('/encore/studentSearch', [StudentDetailController::class, 'searchStudents'])->name('encore.searchStudents'); 
 
-Route::get('/encore/profile/{id}', [StudentDetailController::class, 'stuentsProfile']);
+// route to show the register page
+Route::get('/encore/register', [StudentDetailController::class, 'viewRegistration'])->name('encore.viewRegistration'); 
 
-Route::post('/encore/register', [StudentDetailController::class, 'createStudents']);
+// route to show details of single student
+Route::get('/encore/profile/{id}', [StudentDetailController::class, 'studentsProfile'])->name('encore.studentsProfile'); 
+
+// for form submision
+Route::post('/encore/register', [StudentDetailController::class, 'createStudents'])->name('encore.createStudents'); 
