@@ -8,6 +8,8 @@ $(document).ready(function() {
     $('.search_bar').on('keyup', function() {
         var query = $(this).val(); // Get input value
 
+        console.log(query)
+
         
         clearTimeout(timeout);
         timeout = setTimeout(function() {
@@ -18,16 +20,22 @@ $(document).ready(function() {
                     data: { query: query },
                     success: function(data) {
                         $('.search_result').empty(); // Clear previous suggestions
-                        console.log(data)
+                        console.log(data,'----')
                         
                         if(data.length > 0) {
                             // Loop through each student and append the name to the search result
                             $.each(data, function(index, student) {
-                                $('.search_result').append('<li>' + student.first_name + '</li> <li>' + student.course + '</li>');
+                                $('.search_result').append('<a href="/encore/profile/'+student.id+'"><li>' + student.first_name + student.id + '</li> </a>');
                             });
+
+                            console.log(data,'----')
+
                         } else {
                             // If no results are found, show a message
                             $('.search_result').append('<li>No results found</li>');
+
+                            console.log(data,'----')
+
                         }
                     },
                     error: function() {
