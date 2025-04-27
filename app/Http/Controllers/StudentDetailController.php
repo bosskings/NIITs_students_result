@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class StudentDetailController extends Controller
 {
@@ -21,6 +23,9 @@ class StudentDetailController extends Controller
         $student = StudentDetail::findOrFail($id);
         
         // error_log($student);
+
+        // store student details in session for use 
+        session(['STUDENTS' => $student]);
 
         return view('encore.student', ['student'=>$student]);
     }
@@ -52,13 +57,36 @@ class StudentDetailController extends Controller
     // function to search for students profile
     public function searchStudents(Request $request){
 
-        $query = $request->input('query');
+        $query = strtolower($request->input('query'));
 
-        $students = StudentDetail::whereRaw("MATCH(first_name, middle_name, last_name, email, course) AGAINST(? IN BOOLEAN MODE)", [$query])->get();
+        $students = StudentDetail::where(function ($q) use ($query) {
+            $q->whereRaw('LOWER(first_name) LIKE ?', ["%$query%"])
+            ->orWhereRaw('LOWER(middle_name) LIKE ?', ["%$query%"])
+            ->orWhereRaw('LOWER(last_name) LIKE ?', ["%$query%"])
+            ->orWhereRaw('LOWER(email) LIKE ?', ["%$query%"])
+            ->orWhereRaw('LOWER(course) LIKE ?', ["%$query%"]);
+        })->get();
 
-            
-        return response()->json($students); 
+        return response()->json($students);
         // returnview('encore.index', compact('students'));
+    }
+
+
+
+
+    // function to send email to students
+    public function sendStudentsEmail(Request $request){
+
+        $student = session('STUDENTS');
+        error_log($student->email);
+
+        $message = [
+            'module'=>$request->module,
+            'score'=>$request->score
+        ];
+
+        Mail::to($student->email)->send(new sendStudentResult($message));
+
     }
 
 

@@ -45,11 +45,19 @@
 			</div>
 
 			<div class="send_score">
-				<textarea placeholder="Exam Module" class="col-10 col-md-12 col-esd-12" id="student_score" style="height: 100px"></textarea>
-				<textarea placeholder="Students score" class="col-10 col-md-12 col-esd-12" id="student_score" style="height: 50px"></textarea>
-				<div class="send">					
-					<button id="sendbtn">Send</button>
-				</div>
+				
+				<form action="{{ route('encore.sendStudentsEmail') }}" method="POST">
+					
+					@csrf
+
+					<textarea placeholder="Exam Module" name="module" class="col-10 col-md-12 col-esd-12" id="student_score" style="height: 100px"></textarea>
+					<textarea placeholder="Students score" name="score" class="col-10 col-md-12 col-esd-12" id="student_score" style="height: 50px"></textarea>
+					<div class="send">					
+						<button id="sendbtn">Send</button>
+					</div>
+				
+				</form>
+
 			</div>
 			
 		</div>
