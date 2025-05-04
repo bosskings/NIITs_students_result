@@ -57,8 +57,8 @@
 
             <hr>
             <p>
-                Exam Taken: <strong>{{ $studentData['module'] }}</strong><br><br>
-                Score Achieved: <strong>{{ $studentData['score'] }}%</strong>
+                Exam Taken: <strong>{{ $student['module'] }}</strong><br><br>
+                Score Achieved: <strong>{{ $student['score'] }}%</strong>
             </p>
 
             <i>

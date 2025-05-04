@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
+use Illuminate\Bus\Batch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use PhpParser\Node\Stmt\Return_;
 
 class StudentDetailController extends Controller
 {
@@ -16,13 +18,25 @@ class StudentDetailController extends Controller
         return view('encore.registration') ;
     }
 
+
+
+    // page to return view for entire students in a batch
+
+    public function viewBatch($id){
+
+        $students = StudentDetail::where('batch_no', $id )->get(); 
+
+        return view('encore.batch', ['students' => $students]);
+    }
+
+
+
     // students profile
     public function studentsProfile($id){
         
         // use id to get matching records from DB
         $student = StudentDetail::findOrFail($id);
         
-        // error_log($student);
 
         // store student details in session for use 
         session(['STUDENTS' => $student]);
@@ -56,19 +70,34 @@ class StudentDetailController extends Controller
 
     // function to search for students profile
     public function searchStudents(Request $request){
-
+        
         $query = strtolower($request->input('query'));
+        
+        // check if the search string matches batch number first, before checking others
+        $students = StudentDetail::where('batch_no', $query )->get(); 
+        
+        if( count($students) <1 ){
+            
+            $students = StudentDetail::where(function ($q) use ($query) {
+                $q->whereRaw('LOWER(first_name) LIKE ?', ["%$query%"])
+                ->orWhereRaw('LOWER(middle_name) LIKE ?', ["%$query%"])
+                ->orWhereRaw('LOWER(last_name) LIKE ?', ["%$query%"])
+                ->orWhereRaw('LOWER(email) LIKE ?', ["%$query%"])
+                ->orWhereRaw('LOWER(course) LIKE ?', ["%$query%"]);
+            })->get();
+        
+            
+            return response()->json($students);
+            
+        }else{
 
-        $students = StudentDetail::where(function ($q) use ($query) {
-            $q->whereRaw('LOWER(first_name) LIKE ?', ["%$query%"])
-            ->orWhereRaw('LOWER(middle_name) LIKE ?', ["%$query%"])
-            ->orWhereRaw('LOWER(last_name) LIKE ?', ["%$query%"])
-            ->orWhereRaw('LOWER(email) LIKE ?', ["%$query%"])
-            ->orWhereRaw('LOWER(course) LIKE ?', ["%$query%"]);
-        })->get();
+            $students[0]->type ='batch';
+            return response($students[0]);
 
-        return response()->json($students);
-        // returnview('encore.index', compact('students'));
+
+        }
+
+
     }
 
 
@@ -78,7 +107,7 @@ class StudentDetailController extends Controller
     public function sendStudentsEmail(Request $request){
 
         $student = session('STUDENTS');
-        error_log($student->email);
+        // error_log($student->email);
 
         $message = [
             'module'=>$request->module,

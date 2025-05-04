@@ -5,7 +5,7 @@
 	<div class="search_wrapper">
 		<div class="search_container col-6 col-ld-9 col-esd-11">
 			
-			<form action="{{route('encore.searchStudents')}}" method="GET" class="search_container col-12">
+			<form action="" id="searchForm" method="GET" class="search_container col-12">
 
 				@csrf
 				<input class="search_bar col-10 col-ld-9 col-esd-10" type="text" name="search_string" placeholder="Student Details" autocomplete="off">
@@ -17,13 +17,13 @@
 		</div>
 
 		<div class="search_result" >
-			
+{{-- 			
 			@if ( !isset($students) || $students->isEmpty())
 			{{ "not found" }}
 			@else
 			{{ $students[0]->first_name}}
 			
-			@endif
+			@endif --}}
 			
 		</div>
 	</div>
