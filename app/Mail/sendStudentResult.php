@@ -30,8 +30,8 @@ class sendStudentResult extends Mailable
     public function build()
     {
         return $this->subject('Student Result')
-                    ->view('components.emails')
-                    ->with([ 'student'=> $this->studentData ]); // point to your Blade view
+            ->view('components.emails')
+            ->with([ 'student'=> $this->studentData ]); // point to your Blade view
 
     }
 }

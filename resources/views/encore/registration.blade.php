@@ -5,7 +5,7 @@
 
 	<div class="form-wrapper">
 
-		<div class="form-container col-4 .col-esd-11">
+		<div class="form-container col-4 col-esd-11">
 			<h2>Student Registration Form</h2>
 
 			<form method="POST" action="/encore/register"> 

@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/nav_logo.css',
                 'resources/css/reg.css',
                 'resources/css/student_d.css', 
+                'resources/css/batch_view.css', 
             
                 'resources/js/app.js',
                 'resources/js/result.js',

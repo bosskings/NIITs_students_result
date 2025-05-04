@@ -4,12 +4,11 @@
 
 $(document).ready(function() {
     let timeout;
+
+    const form = document.getElementById('searchForm');
     
     $('.search_bar').on('keyup', function() {
         var query = $(this).val(); // Get input value
-
-        console.log(query)
-
         
         clearTimeout(timeout);
         timeout = setTimeout(function() {
@@ -20,21 +19,34 @@ $(document).ready(function() {
                     data: { query: query },
                     success: function(data) {
                         $('.search_result').empty(); // Clear previous suggestions
-                        console.log(data,'----')
+                        
                         
                         if(data.length > 0) {
                             // Loop through each student and append the name to the search result
                             $.each(data, function(index, student) {
+                                  
                                 $('.search_result').append('<a href="/encore/profile/'+student.id+'"><li>' + student.first_name + student.id + '</li> </a>');
+                                
+                                // set the form action to redirect to the students profile view
+                                form.action = '/encore/profile/'+student.id;
+
+
                             });
 
-                            console.log(data,'----')
 
-                        } else {
+                        }else if( data.type == 'batch'){
+
+                            // check if the search result is a batch or individual
+
+                            $('.search_result').append('<a href="/encore/batch/'+ data.batch_no +'"><li> <b>Batch:</b> ' + data.course + ' - <b> Start Date </b>'+ data.start_date+' </li> </a>');
+                                    
+                            // set the form action to redirect to the batch view
+                            form.action = '/encore/batch/';
+                            
+                            
+                        }else {
                             // If no results are found, show a message
                             $('.search_result').append('<li>No results found</li>');
-
-                            console.log(data,'----')
 
                         }
                     },

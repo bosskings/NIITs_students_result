@@ -16,7 +16,7 @@ Route::get('/encore/studentSearch', [StudentDetailController::class, 'searchStud
 // route to show the register page
 Route::get('/encore/register', [StudentDetailController::class, 'viewRegistration'])->name('encore.viewRegistration'); 
 
-// for form submision
+// for students registeration
 Route::post('/encore/register', [StudentDetailController::class, 'createStudents'])->name('encore.createStudents'); 
 
 
@@ -24,18 +24,11 @@ Route::post('/encore/register', [StudentDetailController::class, 'createStudents
 // route to show details of single student
 Route::get('/encore/profile/{id}', [StudentDetailController::class, 'studentsProfile'])->name('encore.studentsProfile'); 
 
+
+// route to show records from all students in a given batch
+Route::get('/encore/batch/{id}', [StudentDetailController::class, 'viewBatch'])->name('encore.batch');
+
+
 //route for email sending
 Route::post('/encore/profile/sendEmail', [StudentDetailController::class, 'sendStudentsEmail'])->name('encore.sendStudentsEmail');
-
-// route to display the email blade template
-Route::get('/encore/email',function(){
-    $message = [
-        'module'=>'PHP',
-        'score'=>'99'
-    ];
-
-    return view('components.emails', [
-        'studentData' => $message
-    ]);
-});
 
