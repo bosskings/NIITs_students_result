@@ -5,23 +5,45 @@
 
     <section class="form-wrapper">
 
-        <div class="form-container col-5">
-            <form action="" class="" >
+        <div class="form-container col-5 col-sm-11">
+
+            {{-- check if any error is returned from trying to send multiple Emails --}}
+            @if(session('success'))
+                <p class="alert alert-success">{{ session('success') }}</p>
+            @endif
+
+            @if(session('error'))
+                
+                <p class="alert alert-danger">{{ implode(', ', session('error'))." the following email(s) were not sent"; }}</p>
+                
+            @endif
+
+
+            <form action="{{route('encore.sendBatchEmail')}}" method="POST" >
+
+                @csrf
+
+                <div class="item">
+                    <span>Batch </span>
+                    <input type="text" name="batch"  value="{{request()->route('id')}}" >
+                </div>
 
                 <div class="item">
                     <span>Course </span>
-                    <input type="text" placeholder="HTML">
+                    <input type="text" name="course" placeholder="HTML">
                 </div>
 
-                @foreach ($students as $student)
+                <div class="scores">
+
+                    @foreach ($students as $student)
                     <div class="item">   
                         <span>{{ $student->first_name ." ". $student->middle_name ." ". $student->last_name }}</span>
-                        <input type="text" placeholder="score">
+                        <input type="number" value="0" name="score[]" placeholder="score">
                     </div>
-                @endforeach
+                    @endforeach
+                </div>
 
-                <button id="sendbtn">Send Scored</button>
-                
+                <button id="sendbtn" name="sendBtn">Send Scores</button> 
 
             </form>
 

@@ -30,6 +30,53 @@ class StudentDetailController extends Controller
     }
 
 
+    // send emails to everyone in a batch
+
+    public function sendBatchEmail(){
+
+        // get batch id and course
+        $batchCode = request('batch');
+        $course = request('course');
+
+
+        // get the emails of everyone in said batch via batch code
+        $email = StudentDetail::where('batch_no', $batchCode)->pluck('email')->toArray();
+
+
+        //same time get the scores inputed from the form
+        $scores = request('score');
+        
+        
+        // iteratively send all users their scores
+        $notSentEmails = [];
+        for ($i=0; $i < count($email); $i++) { 
+            
+            $message = [
+                'module'=>$course,
+                'score'=>$scores[$i]
+            ];
+            
+            try {
+                Mail::to($email[$i])->send(new sendStudentResult($message));
+            
+            } catch (\Exception $e) {
+            
+                array_push($notSentEmails, $email[$i]);
+                
+            }
+        }
+
+        // show emails not sent, else display success message
+        if (count($notSentEmails)>0) {
+            return back()->with('error', $notSentEmails);
+        }else{
+            return back()->with('success', "All Emails sent");
+        }
+        
+
+    }
+
+
 
     // students profile
     public function studentsProfile($id){
@@ -114,7 +161,18 @@ class StudentDetailController extends Controller
             'score'=>$request->score
         ];
 
-        Mail::to($student->email)->send(new sendStudentResult($message));
+        // check if email was sent
+
+        try {
+            
+            Mail::to($student->email)->send(new sendStudentResult($message));
+            
+            return back()->with('success', 'Email sent successfully!');
+
+        } catch (\Exception $e) {
+            
+            return back()->with('error', 'Failed to send email. Please try again.');
+        }
 
     }
 
