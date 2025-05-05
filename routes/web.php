@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StudentDetailController;
 use App\Mail\sendStudentResult;
+use App\Models\StudentDetail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/encore', function () {
@@ -31,4 +32,8 @@ Route::get('/encore/batch/{id}', [StudentDetailController::class, 'viewBatch'])-
 
 //route for email sending
 Route::post('/encore/profile/sendEmail', [StudentDetailController::class, 'sendStudentsEmail'])->name('encore.sendStudentsEmail');
+
+
+// route to send multiple emails to students in a batch
+Route::post('/encore/sendBatchEmail', [StudentDetailController::class, 'sendBatchEmail'])->name('encore.sendBatchEmail');
 
