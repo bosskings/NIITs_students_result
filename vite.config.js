@@ -12,6 +12,7 @@ export default defineConfig({
                 'resources/css/reg.css',
                 'resources/css/student_d.css', 
                 'resources/css/batch_view.css', 
+                'resources/css/auth.css', 
             
                 'resources/js/app.js',
                 'resources/js/result.js',
