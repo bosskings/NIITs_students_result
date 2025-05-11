@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
 use Illuminate\Bus\Batch;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use PhpParser\Node\Stmt\Return_;
@@ -174,6 +175,31 @@ class StudentDetailController extends Controller
             return back()->with('error', 'Failed to send email. Please try again.');
         }
 
+    }
+
+
+
+
+
+    // function to handle login and authentication
+    public function authentication(Request $request){
+        
+        $username = $request->input('user_id');
+        $password = $request->input('password');
+
+        // 🔒 Hardcoded credentials
+        $hour = now()->hour;
+        $validUsername = 'Encore@niit-ph.com';
+        $validPassword = 'Secret123-code#'.$hour;
+
+        if ($username === $validUsername && $password === $validPassword) {
+            Session(['logged_in' => true ]);
+            Session(['username' => $username]); // optional
+            return redirect('/encore/');
+        }
+
+        return back()->withErrors(['Invalid credentials']);
+        
     }
 
 
