@@ -187,18 +187,20 @@ class StudentDetailController extends Controller
         $username = $request->input('user_id');
         $password = $request->input('password');
 
-        // 🔒 Hardcoded credentials
+        // get the current hour
+
         $hour = now()->hour;
         $validUsername = 'Encore@niit-ph.com';
         $validPassword = 'Secret123-code#'.$hour;
 
         if ($username === $validUsername && $password === $validPassword) {
-            Session(['logged_in' => true ]);
-            Session(['username' => $username]); // optional
-            return redirect('/encore/');
+            
+            session(['logged_in' => true ]);
+            return redirect('/encore');
+
         }
 
-        return back()->withErrors(['Invalid credentials']);
+        return back()->with('error', 'Invalid credentials');
         
     }
 
