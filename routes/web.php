@@ -3,20 +3,35 @@
 use App\Http\Controllers\StudentDetailController;
 use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/encore', function () {
-    return view("encore/index");
-});
 
 
 // route to go to the login page
 Route::get('/encore/auth', function(){
-    return view('ecnore/authentication');
+    return view('encore/authentication');
+})->name('login');
+
+
+// route to process authenitcation form
+Route::post('/encore/auth', [StudentDetailController::class, 'authentication'])->name('encore.authenticate');
+
+
+// route to similate a logout system for test
+Route::get('/encore/logout', function(){
+    session()->flush();
+    return redirect('/encore/auth');
 });
 
-Route::middleware('custom.auth')->group(function () {
 
+
+Route::middleware('authenticate')->group(function () {
+    
+    //home page
+    Route::get('/encore', function () {
+        return view("encore/index");
+    });
 
     //auto complete for the form 
     Route::get('/encore/studentSearch', [StudentDetailController::class, 'searchStudents'])->name('encore.searchStudents'); 

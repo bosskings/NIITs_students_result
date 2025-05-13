@@ -23,11 +23,20 @@
 	<!-- <img src="Images/NIIT BACKGROUND 6.png" class="col-12"> -->
 	<div class="glass ">
 	<a href="index.html"><p> <i class="fa fa-arrow-left"></i> Back </p></a>
-		
-		<form>
-		  
-		  	<input type="text" name="id" placeholder="Login Id">
-			<input type="password" name="pass" placeholder="********">
+  
+  @if (session('error'))
+    <div style="color:red">{{ session('error') }}</div>
+  @endif
+
+
+  {{
+    session()->get('logged_in');
+  }}
+		<form action="{{ route('encore.authenticate') }}  " method="POST">
+            @csrf
+
+		  	<input type="text" name="user_id" placeholder="Login Id">
+			<input type="password" name="password" placeholder="********">
 			<button id="sub">Login</button>
 		  
 		</form>
@@ -38,5 +47,4 @@
 
 </body>
 
-<script src="JS/dashboard.js"></script>
 </html>
