@@ -178,32 +178,4 @@ class StudentDetailController extends Controller
     }
 
 
-
-
-
-    // function to handle login and authentication
-    public function authentication(Request $request){
-        
-        $username = $request->input('user_id');
-        $password = $request->input('password');
-
-        // get the current hour
-
-        $hour = now()->hour;
-        $validUsername = 'Encore@niit-ph.com';
-        $validPassword = 'Secret123-code#'.$hour;
-
-        if ($username === $validUsername && $password === $validPassword) {
-            
-            session(['logged_in' => true ]);
-            return redirect('/encore');
-
-        }
-
-        return back()->with('error', 'Invalid credentials');
-        
-    }
-
-
-
 }

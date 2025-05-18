@@ -1,9 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentDetailController;
-use App\Mail\sendStudentResult;
-use App\Models\StudentDetail;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,21 +12,11 @@ Route::get('/encore/auth', function(){
 })->name('login');
 
 
-// route to process authenitcation form
-Route::post('/encore/auth', [StudentDetailController::class, 'authentication'])->name('encore.authenticate');
+Route::post('/encore/auth', [AuthController::class, 'authentication'])->name('login.auth');
 
 
-// route to similate a logout system for test
-Route::get('/encore/logout', function(){
-    session()->flush();
-    return redirect('/encore/auth');
-});
-
-
-
-Route::middleware('authenticate')->group(function () {
+Route::middleware(['web', 'auth'])->group(function () {
     
-    //home page
     Route::get('/encore', function () {
         return view("encore/index");
     });
@@ -62,3 +50,4 @@ Route::middleware('authenticate')->group(function () {
     Route::post('/encore/sendBatchEmail', [StudentDetailController::class, 'sendBatchEmail'])->name('encore.sendBatchEmail');
 
 });
+// require __DIR__.'/auth.php';

@@ -20,19 +20,24 @@
 </head>
 <body>
   <div class="body">
-	<!-- <img src="Images/NIIT BACKGROUND 6.png" class="col-12"> -->
-	<div class="glass ">
-	<a href="index.html"><p> <i class="fa fa-arrow-left"></i> Back </p></a>
-  
-  @if (session('error'))
-    <div style="color:red">{{ session('error') }}</div>
-  @endif
+ 
+    <!-- <img src="Images/NIIT BACKGROUND 6.png" class="col-12"> -->
+    <div class="glass ">
+    <a href="index.html"><p> <i class="fa fa-arrow-left"></i> Back </p></a>
+    
+    @if (session('error'))
+      <div style="color:red">{{ session('error') }}</div>
+    @endif
 
 
-  {{
-    session()->get('logged_in');
-  }}
-		<form action="{{ route('encore.authenticate') }}  " method="POST">
+    @if(Auth::check())
+      <p>You are logged in as {{ Auth::user()->email }}</p>
+    @else 
+      <p>Logged out {{Auth::check()}} </p>
+    @endif
+
+
+		<form action="{{ route('login.auth') }}  " method="POST">
             @csrf
 
 		  	<input type="text" name="user_id" placeholder="Login Id">
