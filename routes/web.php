@@ -15,7 +15,7 @@ Route::get('/encore/auth', function(){
 Route::post('/encore/auth', [AuthController::class, 'authentication'])->name('login.auth');
 
 
-Route::middleware(['web', 'auth'])->group(function () {
+Route::middleware(['web'])->group(function () {
     
     Route::get('/encore', function () {
         return view("encore/index");
