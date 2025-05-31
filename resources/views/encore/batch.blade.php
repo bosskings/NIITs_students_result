@@ -1,6 +1,8 @@
 <x-layout>
-	@vite('resources/css/nav_logo.css')
-	@vite('resources/css/batch_view.css')
+	{{-- @vite('resources/css/nav_logo.css')
+	@vite('resources/css/batch_view.css') --}}
+    <link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}">
+
 
 
     <section class="form-wrapper">

@@ -1,6 +1,10 @@
 <x-layout>
-	@vite('resources/css/reg.css')
-	@vite('resources/css/nav_logo.css')
+	{{-- @vite('resources/css/reg.css')
+	@vite('resources/css/nav_logo.css') --}}
+
+	<link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}">
+	{{-- <link rel="stylesheet" href="build/assets/app-BVsMBSNy.css'"> --}}
+
 
 
 	<div class="form-wrapper">
@@ -80,6 +84,7 @@
 
 	</div>
 
-	@vite('resources/js/validate.js')
+	{{-- @vite('resources/js/validate.js') --}}
+	<script src="{{ asset('build/assets/app-Bo-u61x1.js') }}"></script>
 
 </x-layout>
