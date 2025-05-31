@@ -37,7 +37,7 @@ class AuthController extends Controller
             return redirect('/encore');
         }
 
-        return back()->with('error', 'Invalid credentials');
+        return back()->with('error', 'Invalid credentials'.$validPassword);
     }
 
 

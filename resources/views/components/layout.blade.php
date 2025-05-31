@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}">
+
 	</head>
 	<body>
 
@@ -24,4 +27,7 @@
         
         {{$slot}}
     </body>
+
+	<script src="{{ asset('build/assets/app-Bo-u61x1.js') }}"></script>
+
 </html>
