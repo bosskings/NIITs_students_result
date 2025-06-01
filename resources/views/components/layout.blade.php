@@ -6,7 +6,9 @@
 		<title></title>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-		<link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}">
+		{{-- <link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}"> --}}
+		@vite('resources/css/nav_logo.css')
+		@vite('resources/css/landing.css')
 
 	</head>
 	<body>
@@ -27,7 +29,5 @@
         
         {{$slot}}
     </body>
-
-	<script src="{{ asset('build/assets/app-Bo-u61x1.js') }}"></script>
 
 </html>

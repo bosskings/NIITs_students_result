@@ -17,7 +17,7 @@ export default defineConfig({
             
             
                 // js files starts here
-                'resources/js/app.js',
+                'resources/js/liveSearch.js',
                 'resources/js/validate.js',
                 'resources/js/result.js',
                 'resources/js/bootstrap.js',

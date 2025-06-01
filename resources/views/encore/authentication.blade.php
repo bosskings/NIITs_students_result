@@ -13,7 +13,6 @@
 
   @vite('resources/css/auth.css')
 
-  {{-- <link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}"> --}}
 
 </head> 
 <body>
