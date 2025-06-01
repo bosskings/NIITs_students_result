@@ -1,11 +1,7 @@
 <x-layout>
 
-	{{-- @vite('resources/css/student_d.css')
-	@vite('resources/css/nav_logo.css') --}}
-
-	<link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}">
-	{{-- <link rel="stylesheet" href="build/assets/app-BVsMBSNy.css"> --}}
-
+	@vite('resources/css/student_d.css')
+	@vite('resources/css/nav_logo.css')
 
 
 	<section class="stdent_data col-8 col-ld-9 col-esd-12">
@@ -68,7 +64,6 @@
 		
 	</section>
 	
-	{{-- @vite('resources/js/result.js') --}}
-	<script src="{{ asset('build/assets/app-Bo-u61x1.js') }} "></script>
+	@vite('resources/js/result.js')
 
 </x-layout>

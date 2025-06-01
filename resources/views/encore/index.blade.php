@@ -1,6 +1,6 @@
 <x-layout>
-	@vite('css/nav_logo.css')
-	@vite('css/landing.css')
+	@vite('resources/css/nav_logo.css')
+	@vite('resources/css/landing.css')
 
 	<div class="search_wrapper">
 		<div class="search_container col-6 col-ld-9 col-esd-11">
@@ -16,9 +16,9 @@
 			
 		</div>
 
-		<div class="search_result" ></div>
+		<div class="search_result" >here</div>
 	</div>
 
-	@vite('/js/app.js')
+	@vite('resources/js/liveSearch.js')
 
 </x-layout>
