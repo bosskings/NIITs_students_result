@@ -1,6 +1,10 @@
 <x-layout>
-	@vite('resources/css/nav_logo.css')
-	@vite('resources/css/landing.css')
+    <link rel="stylesheet" href="/css/nav_logo.css">
+    <link rel="stylesheet" href="/css/landing.css">
+
+
+	{{-- @vite('resources/css/nav_logo.css')
+	@vite('resources/css/landing.css') --}}
 
 	<div class="search_wrapper">
 		<div class="search_container col-6 col-ld-9 col-esd-11">
@@ -19,6 +23,8 @@
 		<div class="search_result" >here</div>
 	</div>
 
-	@vite('resources/js/liveSearch.js')
+	{{-- @vite('resources/js/liveSearch.js') --}}
+
+	<script src="/js/liveSearch.js"></script>
 
 </x-layout>

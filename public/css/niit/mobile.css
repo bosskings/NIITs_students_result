@@ -1,0 +1,145 @@
+@media(max-width:991px){
+    .contact-info{
+      display: flex;
+      justify-content: center;
+    }
+    .course-img{
+      display: none;
+    }
+    .course-content{
+      background: url(/images/niit/banner/mVOM6seIRimFoVF2rq9eEg.jpg);
+      color: #ffffff;
+    }
+  
+  }
+  
+  @media only screen and (max-width:850px) {
+    .newsl{
+      display: none;
+    }
+    
+  }
+  
+  @media (max-width:576px) {
+    #map-img{
+      padding: 2rem;
+      margin: 0 auto;
+      max-width: 576px;
+    }
+  }
+  
+  @media only screen and (max-width: 650px){
+  
+  
+    .sect{
+      display: none;
+  }
+  
+  
+    .courses-header .course-content .course-text{
+      font-size: 22px;
+      max-width: 90%;
+      padding: 20px;
+    backdrop-filter: blur(6px);
+  
+    }
+  
+    .courses-header .course-content .course-text h3{
+      background: linear-gradient( 143deg, #6183ff,  #ffbcf4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  
+  
+      .big_text{
+          padding: 0px;
+          box-sizing: border-box;
+          display: inline-block;
+      }
+  
+    .parentDiv h2{
+      font-size: 20px;
+    }
+  
+    .foot{
+          /* background-color: blue; */
+          /*color: red;*/
+          clear: both;
+          width: 100%;
+  
+      }
+      .small_text{
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+          display: inline-block;
+      }
+      
+      .b1{
+          /* display: none; */
+          flex-direction: column;
+          width: 100%;
+      }
+      .b2{
+          margin-left: 0px;
+      }
+      
+      .mainchild{
+          height: 120px;
+      } 
+      
+  
+  }
+  
+  
+  
+  @media only screen and (max-width:600px){
+  
+    .menu-bar{
+      display: block;
+      
+    }
+    .courses-header .course-content{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+      padding: 0;
+  }
+  .courses-header .course-content .course-text p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+  }
+    .textimage{
+      font-size: 15px ;
+    }
+    
+    .nav-sub{
+      display: none;
+      background-color: aqua;
+    }
+    .burger-container{
+      width: 100%;
+    }
+    .nav1 .NIIT{
+      float: right;
+    }
+    .nav1{
+      display: flex;
+      justify-content: start;
+    }
+    .contact-radio{
+      margin: 0;
+    }
+    .nav1 .bars{
+      display: block;
+      color: #3b3b3b;
+    }
+    
+    
+  
+    
+  }
+  
+  
+  

@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --main-color:#23c4ff;
+    --background-color: #ff00d4af;
+      --white: white;
+      --light-bg:#e7e4e4;
+      --light-color: #dfdddd;
+      --salsa: #58177C;
+      --battleship-grey :#2f142f;
+      --indigo: #4e275b;
+      --gold-sand: #f9b689;
+  }
+  
+  
+  
+  .contact-sec{
+    border-radius: 10px;
+  }
+  .contact-sub{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .form_container input{
+    padding: 20px;
+    border: none;
+  }
+  .contact-socials{
+    display: flex;
+    margin-top: 40px;
+  }
+  .contact{
+      /* background: linear-gradient(to right, var(--main-color), var(--background-color));;  */
+    background: linear-gradient(135deg, #23c4ff,  #ff00d4af);
+    border-radius: 20px;
+    color: white;
+    padding: 35px;
+     
+  }
+  nav{
+    z-index: 4;
+  }
+  
+  .i-mgmtbg{
+    position: relative; 
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(1, 13, 148, 0.7), rgba(95, 134, 219, 0.45)), url(/images/niit/contact\ us.jpg);
+    background-position: center;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+  }
+  
+  .heading{
+    font-size: 80px;   
+    line-height: 140px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--white);
+    background: url(/images/niit/back.png);
+    -webkit-background-clip: text;
+    background-clip: none;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+  }
+  
+  
+  .left-side{
+    background: url(/images/niit/contact.jpeg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    color: white;
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 5px rgb(81, 81, 81);
+    
+    z-index: 1;
+    
+    
+  }
+  
+  .left-side::after {
+    background: linear-gradient(-60deg, transparent, black);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    position: absolute;
+    border-radius: 20px ;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    content: ""; 
+  }
+  
+  /* .left-side:hover{
+    transform: translateY(-7px) scale(1.009) translateZ(0);
+  } */
+    
+  
+  
+  .contact-info{
+    padding: 10px;
+  
+  }
+  .contact-radio{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  .radios{
+    display: flex;
+    padding: 4px;
+  }
+  .radio-input {
+    margin-right: 8px;
+  }
+  .btn-div{
+    display: flex;
+    justify-content: right;
+  
+  }
+  .send-button{
+    background-color: #000;
+    color: white;
+    padding: 7px;
+    
+  }
+  .contact-left-head{
+    text-align: start;
+  }
+  .contact-input{
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    background-color: rgba(65, 20, 110, 0.3);
+  }
+  .contact-input:hover{
+    color: white;
+  }
+  
+  #topper{
+    margin: 0;
+    
+  }
+  
+  .message{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px ;
+    background-color: rgba(65, 20, 110, 0.3);
+  }
+  .message:hover{
+    color: white;
+  }
+  #map-img{
+    height: 60vh;
+  }
+  
+  
+  
+  .center{
+      
+      text-align: center;
+  }
+  .imgft{
+      width: 12.5%;
+      height: 100%;
+      float: left;
+      padding: 8px;
+      text-align: center;
+      
+  
+  }
+  .img_txt{
+      width: 11.11%;
+      box-sizing: border-box;
+      height: 20px;
+      /*border: 2px solid pink;*/
+      float: left;
+      text-align: center;
+      
+  
+  }
+  .form_container input{
+    padding: 5px;
+  }
+  
+  .message{
+    padding: 5px;
+  }
+  
+  
+  
+  
+  
+      hr{
+          width: 100%;
+      }
+  
+      .sub{
+          background-color: black;
+          color: white;
+          padding: 10px;
+          border-radius: 10%;
+          -webkit-border-radius: 10%;
+          -moz-border-radius: 10%;
+          -ms-border-radius: 10%;
+          -o-border-radius: 10%;
+  }
+  #text{
+      padding: 10px;
+      background-color: gray;
+  }
+  .reg{
+      display: flex
+      
+  }
+  .norms{
+      display: grid
+  }
+  
+  .parentDiv span{
+    font-size: 13px;
+  }
+  
+  

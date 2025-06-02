@@ -1,6 +1,9 @@
 <x-layout>
-	@vite('resources/css/reg.css')
-	@vite('resources/css/nav_logo.css')
+    <link rel="stylesheet" href="/css/nav_logo.css">
+    <link rel="stylesheet" href="/css/reg.css">
+
+	{{-- @vite('resources/css/reg.css')
+	@vite('resources/css/nav_logo.css') --}}
 
 
 
@@ -81,6 +84,8 @@
 
 	</div>
 
-	@vite('resources/js/validate.js')
+	<script src="/js/validate.js"></script>
+
+	{{-- @vite('resources/js/validate.js') --}}
 
 </x-layout>

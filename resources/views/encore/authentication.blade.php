@@ -10,8 +10,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="/css/auth.css">
 
-  @vite('resources/css/auth.css')
+  {{-- @vite('resources/css/auth.css') --}}
 
 
 </head> 
@@ -20,7 +21,7 @@
  
     <!-- <img src="Images/NIIT BACKGROUND 6.png" class="col-12"> -->
     <div class="glass ">
-    <a href="index.html"><p> <i class="fa fa-arrow-left"></i> Back </p></a>
+    <a href="{{ route('home') }}"><p> <i class="fa fa-arrow-left"></i> Back </p></a>
     
     @if (session('error'))
       <div style="color:red">{{ session('error') }}</div>

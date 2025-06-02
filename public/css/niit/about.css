@@ -1,0 +1,573 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  
+  .title1{
+    font-weight: 300;
+    font-size: smaller;
+  }
+  .img1 img{
+    border-radius: 20px;
+    box-shadow: -10px 10px 10px rgb(197, 197, 197);
+  }
+  .write1{
+    clear: both;
+  }
+  
+  
+  /* .head1{
+    height: 45vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  } */
+  
+  .img2 img{
+    box-shadow: 0px 10px 3px rgb(197, 197, 197);
+  }
+  
+  .staff{
+    padding: 0;
+  }
+  
+  .pic-container{
+    margin-bottom: 30px;
+  }
+  
+  /* michael */
+  
+  
+  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+  @import url('https://fonts.cdnfonts.com/css/futura-pt');
+  @import url('https://fonts.cdnfonts.com/css/futura-lt');
+  @import url('https://fonts.cdnfonts.com/css/inter');
+  :root{
+      /* Colors */
+      --main-color:rgb(30, 1, 148);
+      --background-color: rgb(95, 134, 219);
+      --white: white;
+      --light-bg:#cccccc;
+      --light-color: #dfdddd;
+      --salsa: #58177C;
+      --battleship-grey :#2f142f;
+      --indigo: #4e275b;
+      --gold-sand: #f9b689;
+      --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+      --border:.1rem solid rgba(0,0,0,.2);    
+  
+      /* Fonts */
+      --futurapt: 'Futura PT', sans-serif;
+      --futuralt: 'Futura LT', sans-serif;
+      --inter: 'Inter', sans-serif;
+  }
+  *{
+      font-family: var(--inter);                                                                                                
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+  }
+  body{
+      background-color: var(--light-color);
+  }
+  
+  header{
+      /* height: 70vh; */
+        background:linear-gradient(rgba(1, 13, 148, 0.7), rgba(95, 134, 219, 0.45)), url(/images/niit/Build1.jpeg);
+        background-attachment:fixed;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      box-shadow: var(--box-shadow);
+  }
+  section{
+      margin-top: 2rem;
+      margin: 0 auto;
+      max-width: 1300px;
+  }
+  
+  
+  .heading{  
+      line-height: 130px;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--white);
+      background: url(/images/niit/back.png);
+      -webkit-background-clip: text;
+      background-clip: none;
+      background-position: 0 0;
+      animation: back 20s linear infinite;
+  }
+  @keyframes back {
+      100%{
+          background-position: 2000px 0;
+      }
+  }
+  .text-details h3{
+      font-size: 4rem;
+      color: var(--white);
+  }
+  
+  .text-details p{
+    font-size: 2rem;
+    color: var(--white);
+    
+  
+  }
+  
+  .text-details span{
+      font-size: 6rem;
+      margin-top: 2rem;
+  }
+  .content {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .text-details {
+      max-width: 800px;
+      padding: 10px;
+  }
+  
+  .img-details {
+      display: flex;
+      align-items: center;
+      max-width: 500px;
+  
+  }
+  .img-details img{
+      border: none;
+      outline: none;
+  }
+  @keyframes levitate {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  
+  .levitate{
+      animation: levitate 3s ease-in-out infinite;
+  }
+  
+  
+  
+  .testimonials{
+      /* background-color: var(--light-color); */
+      padding: 2rem;
+      /*margin: 0 auto;
+      max-width: 1300px;
+      text-align: center; */
+  }
+  .center-heading{
+      text-align: center;
+      padding: 2rem;
+      margin: 0 auto;
+      max-width: 1300px;
+  }
+  .center-heading .title{
+      margin-bottom: 1rem; 
+      -webkit-background-clip: text;
+      background-clip: none;
+      -webkit-text-fill-color: transparent;
+  }
+  .center-heading h3{
+      background: linear-gradient(to right, rgb(36, 35, 35), rgb(51, 51, 51));
+      margin-bottom: 1rem;
+      -webkit-background-clip: text;
+      background-clip: none;
+      -webkit-text-fill-color: transparent;
+  }
+  .center-heading h4{
+      font-size: 1rem;
+      background: linear-gradient(to right, rgb(36, 35, 35), rgb(51, 51, 51));
+      /* margin-bottom: 1rem; */
+      -webkit-background-clip: text;  
+      background-clip: none;
+      -webkit-text-fill-color: transparent;
+  }
+  .reviews .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+  
+    word-wrap: wrap;
+      /* padding: 2rem; */
+      gap: 1rem;
+      align-items: flex-start;
+      justify-content: center;
+      
+  }
+  .reviews .box-container .box{
+      background-color: rgba(255, 255, 255, 0.1); 
+      box-shadow: var(--box-shadow);
+      border: 2px solid white;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      /* backdrop-filter: blur(50px); */
+  }
+  .reviews .box-container .box p{
+      text-align: left;
+      /* font-size: 1.3rem; */
+      color: black;
+      font-size: medium;
+      line-height: 1.8;
+  }
+  .reviews .box-container .box4{
+    padding: 2rem;
+  }
+  .reviews .box-container .box .user{
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      align-items: center;
+  }
+  .reviews .box-container .box .user img{
+      height: 6rem;
+      width: 6rem;
+      border-radius: 6rem;
+      object-fit: cover;
+  }
+  .reviews .box-container .box .user h3{
+      font-size: 1.2rem;
+      color: var(--black);
+      margin-bottom: .5rem;
+  }
+  
+  .drop{
+    display: none;
+  }
+  
+  .col-section{
+      padding: 2rem;
+  }
+  .service{
+      padding: 30px 60px;
+  }
+  
+  .service-list{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      gap: 30px;
+      /* border: #2f142f solid; */
+    }
+  
+  
+  
+  .service-list li{
+    list-style: none;
+  }
+    
+    
+    .service-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .service-card .card-icon {
+      /* background: var(--salsa); */
+      min-width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+  
+    .insta{
+      background: rgb(238, 47, 47);
+    }
+    .face{
+      background: rgb(47, 95, 238);
+  
+    }
+    .phone{
+      background: rgb(29, 163, 65);
+  
+    }
+    .link{
+      background: rgb(44, 121, 202);
+      
+  
+    }
+  
+    i.fab.fa-instagram::before, i.fab.fa-facebook-f::before, i.fas.fa-phone-alt::before, i.fab.fa-linkedin-in::before {
+      color: #ffffff;
+  
+    }
+  
+    
+    .service-card .card-icon img {
+      filter: brightness(0) invert(1);
+      width: 60%;
+      height: auto;
+    }
+    .service-card .card-icon img:hover{
+      transform: scale(1.1);
+    }
+    .service-card .card-title {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    
+    .service-card .card-text {
+      color: var(--black);
+      font-size: 1rem;
+    }
+    
+    .service-card .card-text span {
+      display: inline-block;
+      color: var(--salsa);
+    }
+    
+  
+  
+  
+  
+  
+  /* kamsie */
+  
+  
+  
+  .about{
+      /*border: 2px solid black;*/
+      height:100px;
+      background-color: #cccccc;
+      clear: both;
+  
+  }
+  .container1{
+      /*border: 5px solid gold;*/
+    padding: 50px;
+       float: left;
+     display: flex;
+    align-items: center;
+  }
+  .b1{
+      /*border: 2px solid green;*/
+      float: left;
+      box-sizing: border-box;
+      /*width: 30%;*/
+      height: 100%;
+      padding: 20px;
+      font-family: sans-serif;
+  }
+  .b2{
+      float: left;
+      box-sizing: border-box;
+    margin-top: 10px;
+      padding: 20px;
+      height: 100%;
+      font-family: sans-serif;
+  
+  }
+  .b2 h1{
+      font-size: large;
+      color: #3399ff;
+      line-height: 10px;
+  }
+  .h2{
+      font-size: 40px;
+  }
+  .pic{
+      /*border: 2px solid black;*/
+      /* background-image: url(pics/istockphoto-1219752275-612x612.jpg);
+      background-size: cover;
+      background-repeat: no-repeat; */
+      box-shadow: 12px 8px 16px rgb(197, 197, 197);
+      z-index: 1;
+    height: 300px;
+      position: relative;
+    
+  
+      
+  }
+  
+  
+  /*#pic{
+      object-fit: cover;
+      width: 100%;
+  }*/
+  .pic::after{
+      background-color: #1a1a1a;
+      opacity: 0.5;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+  }
+  .text{
+      padding: 5px;
+      box-sizing: border-box;
+      float: left;
+      
+  }
+  
+  h2{
+      font-size:50px;
+  }
+  .tiny{
+      float: left;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 22px;
+      
+  }
+  .circle{
+      background-color: #7790ff;
+      border-radius: 100px;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      
+  }
+  .c2{
+      background-color: #7790ff;
+      border-radius: 100px;
+      display: inline-block;
+      width: 70px;
+      height: 40px;
+  }		
+  
+  
+  
+                                                              
+  
+  @media only screen and (max-width: 991px) {
+  
+    .reviews .box-container{
+      grid-template-columns: repeat(auto-fit, 27rem);
+    }
+  
+    .pic{
+      height: 200px;
+    }
+    
+    .pic img{
+      height: 250px;
+    }
+  
+    .text-details h3{
+      font-size: 70px;
+    }
+  
+    .about-heading{
+      text-align: center;
+    }
+    
+    .container1{
+      display: block;
+    }
+    .reviews .box-container .box4{
+      padding: 0;
+      padding: 0 0 1.5rem 0;
+    }
+    .reviews .box-container .box p{
+      font-size: large;
+    }
+    .b2 p{
+      font-size: 20px;
+    }
+  
+  
+    
+  }
+  
+  @media only screen and (max-width:850px) {
+    .newsl{
+      display: none;
+    }
+    /* header{
+        background:linear-gradient(rgba(1, 13, 148, 0.7), rgba(95, 134, 219, 0.45)), url(/images/niit/front\ desk\ mini.jpg);
+        background-size:cover;
+    } */
+  }
+  
+  
+  
+  @media only screen and (max-width:767px) {
+    .card{
+      padding: 0px;
+    }
+   .infor{
+    float: left;
+   }
+  .img-details{
+      display: none;
+    }
+  
+  
+    .container1{
+      padding: 10px;
+    }
+  
+  
+  .text-container{
+    background:linear-gradient(rgba(1, 13, 148, 0.486), rgba(95, 134, 219, 0.45)), url(/images/niit/front\ desk\ mini.jpg);
+    background-size:cover;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+     box-shadow: var(--box-shadow);
+  }
+  
+  
+  .img-details{
+      display: none;
+  }
+  
+  
+  }
+  
+  
+  @media only screen and (max-width: 550px){
+    .del{
+      display: none;
+    }
+    .text-details h3{
+      font-size: 40px;
+    }
+    .text-details p{
+      font-size: 20px;
+    }
+    .text-details{
+      margin: auto;
+    }
+    
+    .testimonials{
+      padding: 0px;
+    }
+  
+  
+    .text-container{
+      padding: 50px 30px;
+      overflow: hidden;
+    }
+  
+    .text-container p{
+      padding: 20px 0px;
+      font-size: 22px;
+    }
+  
+    .circle{
+      border-radius: 100px;
+      width: 60px;
+      height: 40px;
+      
+    }
+    .tiny{
+      padding: 0;
+    }
+  
+  
+  }
+  
+  

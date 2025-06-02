@@ -1,6 +1,9 @@
 <x-layout>
-	@vite('resources/css/nav_logo.css')
-	@vite('resources/css/batch_view.css')
+    <link rel="stylesheet" href="/css/nav_logo.css">
+    <link rel="stylesheet" href="/css/batch_view.css">
+
+	{{-- @vite('resources/css/nav_logo.css')
+	@vite('resources/css/batch_view.css') --}}
 
 
 

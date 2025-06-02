@@ -24,7 +24,7 @@
 
 @font-face {
 	font-family: Futura_PT;
-	src: url('/public/fonts/FuturaCyrillicBold.ttf') format('truetype');
+	src: url('/fonts/FuturaCyrillicBold.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }

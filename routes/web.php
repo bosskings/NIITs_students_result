@@ -6,6 +6,14 @@ use Illuminate\Support\Facades\Route;
 
 
 
+// routes to the main website.
+Route::get('/', function(){ return view('niit/index'); })->name('home');
+Route::get('/diploma', function(){ return view('niit/diploma'); })->name('diploma');
+Route::get('/courses', function(){ return view('niit/courses'); })->name('courses');
+Route::get('/contact', function(){ return view('niit/contact'); })->name('contact');
+Route::get('/about', function(){ return view('niit/about'); })->name('about');
+
+
 // route to go to the login page
 Route::get('/encore/auth', function(){
     return view('encore/authentication');

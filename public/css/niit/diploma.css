@@ -1,0 +1,317 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+@import url('https://fonts.cdnfonts.com/css/futura-lt');
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+:root{
+    /* Colors */
+    --main-color:rgb(30, 1, 148);
+    --background-color: rgb(95, 134, 219);
+    --white: white;
+    --light-bg:#e0e0e0;
+    --light-color: #bdb9b9;
+    --salsa: #58177C;
+    --black:#424549;
+    --battleship-grey :#2f142f;
+    --indigo: #4e275b;
+    --gold-sand: #f9b689;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.2);    
+
+    /* Fonts */
+    --futurapt: 'Futura PT', sans-serif;
+    --futuralt: 'Futura LT', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+                                                
+}
+*{
+	font-family: sans-serif;                                                                    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body{
+    background-color: var(--white);
+}
+a{
+    text-decoration: none;
+}
+
+
+.heading{
+    font-size: 80px;   
+    line-height: 140px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--white);
+    background: url(/images/niit//back.png);
+    -webkit-background-clip: text;
+    background-clip: none;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.text-details h3{
+    font-size: 6rem;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.img-details {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+
+}
+.img-details img{
+    border: none;
+    outline: none;
+}
+.niit-body {
+    position: relative; 
+    width: 100%;
+    height: 65vh;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image:linear-gradient( -35deg, rgb(134, 49, 209), transparent), url(/images/niit/diploma.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.s-devimg{
+    position: relative; 
+    width: 100%;
+    height: 65vh;
+    background-image: linear-gradient(rgba(1, 13, 148, 0.7), rgba(95, 134, 219, 0.45)), url(artificial-intelligence-codes-developing-screen.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+main{
+    margin-top: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.diploma-course .s-dev{
+    background-color: var(--white);
+    border-radius: .5rem;
+    /* border: var(--border); */
+    padding: 2rem;
+    margin-bottom: 5rem;
+    box-shadow: var(--box-shadow);
+}
+.diploma-course .s-devs p{
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.drop1{
+    display: none;
+}
+
+.drop2{
+    display: none;
+}
+/* .diploma-course .i-mgmt{
+    background-color: var(--white);
+    border-radius: .5rem;
+    border: var(--border);
+    padding: 2rem;
+    margin-bottom: 5rem;
+    box-shadow: var(--box-shadow);
+} */
+.diploma-course .s-dev .course-name{
+    text-align: center;
+    font-size: 2rem;
+}
+.diploma-course .s-devs .course-name{
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* .diploma-course .i-mgmt .course-name{
+    text-align: center;
+    font-size: 2rem;
+} */
+.diploma-course .s-dev .course-content{
+    text-align: center;
+    background: linear-gradient(to right, var(--salsa), var(--indigo));
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+.diploma-course .s-devs .course-content{
+    font-size: 1.5rem;
+}
+/* .diploma-course .i-mgmt .course-content{
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(to right, var(--salsa), var(--indigo));
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+} */
+.diploma-course .s-dev .semester{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: var(--salsa);
+    margin-bottom: 1.5rem;
+}
+.diploma-course .s-devs .semester{
+    font-size: 1.2rem;
+}
+.diploma-course .i-mgmt .semester{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: var(--salsa);
+    margin-bottom: 1.5rem;
+}
+.diploma-course .s-dev h2{
+    font-size: 1.5rem;
+    background: linear-gradient(to right, var(--main-color), var(--background-color));
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+/* .diploma-course .i-mgmt h2{
+    font-size: 1rem;
+    background: linear-gradient(to right, var(--salsa), var(--indigo));
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+} */
+.diploma-course .s-dev h3{
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 2.5rem;
+}
+/* .diploma-course .i-mgmt h3{
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 2.5rem;
+} */
+.diploma-course .s-dev .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.2rem 0;
+    margin-bottom: 1rem;
+}
+.diploma-course .s-dev .tags p{
+    padding: 0.8rem;
+    border-radius: 2rem;
+    background-color: var(--light-bg);
+    border: var(--border);
+    color: var(--black);
+}
+
+.diploma-course .s-dev .tags p i{
+    margin-right: .5rem;
+        color: var(--black);
+}
+.diploma-course .s-dev{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+/* .diploma-course .i-mgmt p{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+} */
+.btn{
+    display: inline-block;
+    /* margin-top: 1rem; */
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--white);
+    background: linear-gradient(135deg, #23c4ff,  #ff00d4af);
+
+    border: var(--border);
+    /* border-radius: .5rem; */
+    text-transform: capitalize;
+    text-align: center;
+}
+.btn:hover{
+    background: var(--white);
+    color: var(--main-color);
+    border: var(--border);
+    transition: 1s  ;
+}
+/* .diploma-course .i-management{
+    background-color: var(--white);
+    border-radius: .5rem;
+    border: var(--border);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+} 
+.diploma-course .i-management h2{
+    font-size: 1rem;
+    background: linear-gradient(to right, var(--salsa), var(--indigo));
+    margin-bottom: 1rem;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+
+.diploma-course .i-management h3{
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 2.5rem;
+}
+.diploma-course .i-management .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.2rem 0;
+    margin-bottom: 1rem;
+}
+.diploma-course .i-management .tags p{
+    padding: 0.8rem;
+    border-radius: 2rem;
+    background-color: var(--light-bg);
+    border: var(--border);
+    color: var(--black);
+}
+.diploma-course .i-management .tags p i{
+    margin-right: .5rem;
+        color: var(--black);
+}
+.diploma-course .i-management p{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+} */
+.semester-container{
+    margin-bottom: 2.5rem;
+}

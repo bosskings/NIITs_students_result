@@ -13,6 +13,8 @@ export default defineConfig({
                 'resources/css/reg.css',
                 'resources/css/student_d.css',
                 'resources/css/app.css',
+                'resources/css/niit/index.css',
+                'resources/css/niit/diploma.css',
             
             
             
