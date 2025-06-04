@@ -108,9 +108,11 @@ class StudentDetailController extends Controller
         $students->reg_no = request('regNo');
         $students->batch_no = request('batchNo');
         
-
-        $students->save();
-
+        if ($students->save()) {
+            return redirect()->back()->with('success', 'Details saved successfully!');
+        } else {
+            return redirect()->back()->with('error', 'Failed to save details.');
+        }
     }
 
 

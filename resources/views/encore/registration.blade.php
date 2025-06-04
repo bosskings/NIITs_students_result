@@ -12,6 +12,18 @@
 		<div class="form-container col-4 col-esd-11">
 			<h2>Student Registration Form</h2>
 
+			@if (session('success'))
+				<div style="text-align: center; color:green">
+					{{ session('success') }}
+				</div>
+			@endif
+
+			@if (session('error'))
+				<div style="text-align: center; color:red">
+					{{ session('error') }}
+				</div>
+			@endif
+
 			<form method="POST" action="/encore/register"> 
 
 				@csrf

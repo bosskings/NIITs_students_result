@@ -20,6 +20,26 @@
     rel="stylesheet" />
 
   <title>contact</title>
+
+
+
+
+    {{-- meta tags starts --}}
+
+    <meta name="description" content="NIIT PH, niit portharcourt. niitph, niit is a tech institute in portharcourt ">
+
+    <!-- Keywords (optional, low SEO weight) -->
+    <meta name="keywords" content="NIIT, niit, niitph, niit-ph, niit.com, niit-ph.com, niit portharcourt, national institue of information technology, tech in port harcourt, technology, ">
+  
+    <!-- Author -->
+    <meta name="author" content="NIIT ">
+  
+    <!-- Robots (indexing behavior) -->
+    <meta name="robots" content="niitph.com">
+  
+    <!-- Canonical URL (avoids duplicate content issues) -->
+    <link rel="canonical" href="https://niitph.com/">
+  
 </head>
 
 <body>
@@ -47,7 +67,7 @@
           <div class="nav1">
             <div class="burger-container">
               <div><i class="menu-bar bars fa-solid fa-bars"></i></div>
-              <a href="index.html" class="NIIT">
+              <a href="{{ route('home') }}" class="NIIT">
                 <h1 class="active">
                   <img src="/images/niit/niit-logo.png" height="70px" alt="">
                 </h1>
@@ -239,15 +259,15 @@
 
         <div>
           <h2>Company</h2>
-          <p> <a href="About us.html">About us</a></p>
-          <p> <a href="Contact.html">Contact Us</a></p>
+          <p> <a href="{{ route('about') }}">About us</a></p>
+          <p> <a href="{{ route('contact') }}">Contact Us</a></p>
         </div>
 
         <div>
           <h2>Executives</h2>
-          <p> <a href="About us.html#staff">Faculties</a> </p>
-          <p> <a href="About us.html#management"> Management</a></p>
-          <p><a href="About us.html#testimonials">Testimonials</a></p>
+          <p> <a href="{{ route('about') }}#staff">Faculties</a> </p>
+          <p> <a href="{{ route('about') }}#management"> Management</a></p>
+          <p> <a href="{{ route('about') }}#testimonials">Testimonials</a></p>
         </div>
 
 
