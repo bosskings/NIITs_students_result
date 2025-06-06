@@ -35,13 +35,13 @@
 
 				<div class="form-group">
 					<label for="middlename">Middle Name:</label>
-					<input name="middleName" class="col-12" type="text" id="middlename" placeholder="Enter student middle name" maxlength="100">
+					<input name="middleName" class="col-12" type="text" id="middlename" placeholder="Enter student middle name" maxlength="100" required>
 				</div>
 
 
 				<div class="form-group">
 					<label for="lastname">Last Name:</label>
-					<input name="lastName" class="col-12" type="text" id="lastname" placeholder="Enter student middle name" maxlength="100">
+					<input name="lastName" class="col-12" type="text" id="lastname" placeholder="Enter student middle name" maxlength="100" required>
 				</div>
 
 				<div class="form-group">
@@ -53,29 +53,115 @@
 					<label for="programm">Program:</label>
 					<input name="program" class="col-12" type="text" id="program" placeholder="Enter student program" required maxlength="100" list="courses">
 					<datalist id="courses">
-						<option value="Web Developement">
+						<option value="Web Development">
 						<option value="Web Design">
 						<option value="Data Analysis">
 						<option value="Digital Marketing">
 						<option value="Cyber Security">
 						<option value="Software Engineering(MMS)">
 						<option value="MicroSoft Office">
-						<option value="Mangement information Science (MIS)">
-						<option value="Projec management (PMP)">
+						<option value="Management information Science (MIS)">
+						<option value="Project management (PMP)">
 						<option value="Multi-Media">
 						<option value="Java Diploma">
 						<option value="Python Diploma">
 						<option value="UI/UX">
 						<option value="Hardware and NetWorking">
-						<option value="Mobile App developement on Adndroid">
+						<option value="Mobile App development on Android">
 					
 					</datalist>		
 			
 				</div>
 
 				<div class="form-group">
-					<label for="phone">Phone:</label>
-					<input  name="phone" class="col-12" type="tel" id="phone" placeholder="Enter student phone number" required maxlength="15">
+					<label for="phone">Your Phone:</label>
+					<input  name="phone" class="col-12" type="tel" id="phone" placeholder="Enter student phone number" required maxlength="15" required>
+				</div>
+
+				<div class="form-group">
+					<label for="Guardian_Phone">Guardian Phone:</label>
+					<input  name="guardianPhone" class="col-12" type="tel" id="Guardian_Phone" placeholder="Enter Guardian phone number" required maxlength="15" required>
+				</div>
+
+
+				<div class="form-group">
+					<label for="dob">Date of birth:</label>
+					<input  name="dob" class="col-12" type="date" id="dob" required>
+				</div>
+
+
+				<div class="form-group">
+					<label for="pob">Place of birth:</label>
+					<input  name="pob" class="col-12" type="text" id="pob" required>
+				</div>
+
+
+				<div class="form-group">
+					<label for="educationalQualification">Educational Qualification :</label>
+					<select name="educationalQualification" id="educationalQualification" class="col-12" required>
+						<option value="PHD">PHD</option>
+						<option value="Master">Masters</option>
+						<option value="BSC">BSC</option>
+						<option value="WAEC">WAEC</option>
+						<option value="None">None</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="stateOfOrigin">State of origin :</label>
+					<select name="stateOfOrigin" id="stateOfOrigin" class="col-12" required>
+						<option value="Abia">Abia</option>
+						<option value="Adamawa">Adamawa</option>
+						<option value="Akwa Ibom">Akwa Ibom</option>
+						<option value="Anambra">Anambra</option>
+						<option value="Bauchi">Bauchi</option>
+						<option value="Bayelsa">Bayelsa</option>
+						<option value="Benue">Benue</option>
+						<option value="Borno">Borno</option>
+						<option value="Cross River">Cross River</option>
+						<option value="Delta">Delta</option>
+						<option value="Ebonyi">Ebonyi</option>
+						<option value="Edo">Edo</option>
+						<option value="Ekiti">Ekiti</option>
+						<option value="Enugu">Enugu</option>
+						<option value="Gombe">Gombe</option>
+						<option value="Imo">Imo</option>
+						<option value="Jigawa">Jigawa</option>
+						<option value="Kaduna">Kaduna</option>
+						<option value="Kano">Kano</option>
+						<option value="Katsina">Katsina</option>
+						<option value="Kebbi">Kebbi</option>
+						<option value="Kogi">Kogi</option>
+						<option value="Kwara">Kwara</option>
+						<option value="Lagos">Lagos</option>
+						<option value="Nasarawa">Nasarawa</option>
+						<option value="Niger">Niger</option>
+						<option value="Ogun">Ogun</option>
+						<option value="Ondo">Ondo</option>
+						<option value="Osun">Osun</option>
+						<option value="Oyo">Oyo</option>
+						<option value="Plateau">Plateau</option>
+						<option value="Rivers">Rivers</option>
+						<option value="Sokoto">Sokoto</option>
+						<option value="Taraba">Taraba</option>
+						<option value="Yobe">Yobe</option>
+						<option value="Zamfara">Zamfara</option>
+						<option value="FCT">FCT</option>
+					
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="gender">Gender :</label>
+					<select name="gender" id="gender" class="col-12" required>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="lga">Local Government Area :</label>
+					<input name="lga" class="col-12" type="text" id="lga" placeholder="Enter Local Government Area" required>
 				</div>
 
 				<div class="form-group">

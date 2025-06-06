@@ -103,6 +103,15 @@ class StudentDetailController extends Controller
         $students->middle_name = request('middleName');
         $students->last_name = request('lastName');
         $students->email = request('email');
+
+        $students->guardianPhone = request('guardianPhone');
+        $students->dob = request('dob');
+        $students->pob = request('pob');
+        $students->educationalQualification = request('educationalQualification');
+        $students->stateOfOrigin = request('stateOfOrigin');
+        $students->gender = request('gender');
+        $students->lga = request('lga');
+
         $students->course = request('program');
         $students->phone = request('phone');
         $students->reg_no = request('regNo');

@@ -49,14 +49,31 @@
 
 			<div class="send_score">
 				
+
+				@if(session('error'))
+					<div class="alert alert-danger alert-dismissible fade show" role="alert">
+						{{ session('error') }}
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+
+				@elseif(session('success'))
+					<div class="alert alert-danger">
+						{{ session('success') }}
+					</div>
+					
+					
+				@endif
+
+
+
 				<form action="{{ route('encore.sendStudentsEmail') }}" method="POST">
 					
 					@csrf
 
-					<textarea placeholder="Exam Module" name="module" class="col-10 col-md-12 col-esd-12" id="student_score" style="height: 100px"></textarea>
+					<textarea placeholder="Exam Module" name="module" class="col-10 col-md-12 col-esd-12" id="student_course" style="height: 100px"></textarea>
 					<textarea placeholder="Students score" name="score" class="col-10 col-md-12 col-esd-12" id="student_score" style="height: 50px"></textarea>
 					<div class="send">					
-						<button id="sendbtn">Send</button>
+						<button type="submit" id="sendbtn">Send</button>
 					</div>
 				
 				</form>

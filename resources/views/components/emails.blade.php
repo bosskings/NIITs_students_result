@@ -52,7 +52,7 @@
 
         <section>
             <div>
-                <img src="https://niit-ph.com/Images/niit-logo.png" alt="NIITS atom logo">
+                <img src="https://niitph.com/images/niit/niit-logo.png" alt="NIITS atom logo">
             </div>
 
             <hr>
@@ -62,7 +62,7 @@
             </p>
 
             <i>
-                For more informations: <a href="https://niit-ph.com"> niit-ph.com </a>
+                For more informations: <a href="https://niitph.com"> niit-ph.com </a>
             </i>
         </section>
     </body>
