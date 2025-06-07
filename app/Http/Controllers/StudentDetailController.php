@@ -44,7 +44,7 @@ class StudentDetailController extends Controller
         $email = StudentDetail::where('batch_no', $batchCode)->pluck('email')->toArray();
 
 
-        //same time get the scores inputed from the form
+        //same time get the scores inputted from the form
         $scores = request('score');
         
         
@@ -104,11 +104,11 @@ class StudentDetailController extends Controller
         $students->last_name = request('lastName');
         $students->email = request('email');
 
-        $students->guardianPhone = request('guardianPhone');
-        $students->dob = request('dob');
-        $students->pob = request('pob');
-        $students->educationalQualification = request('educationalQualification');
-        $students->stateOfOrigin = request('stateOfOrigin');
+        $students->guardians_phone = request('guardianPhone');
+        $students->date_of_birth = request('dob');
+        $students->state_of_birth = request('pob');
+        $students->educational_qualification = request('educationalQualification');
+        $students->state_of_origin = request('stateOfOrigin');
         $students->gender = request('gender');
         $students->lga = request('lga');
 
@@ -175,15 +175,15 @@ class StudentDetailController extends Controller
 
         // check if email was sent
 
+        
         try {
             
             Mail::to($student->email)->send(new sendStudentResult($message));
-            
+
             return back()->with('success', 'Email sent successfully!');
 
         } catch (\Exception $e) {
-            
-            return back()->with('error', 'Failed to send email. Please try again.');
+            return back()->with('error', $e);
         }
 
     }

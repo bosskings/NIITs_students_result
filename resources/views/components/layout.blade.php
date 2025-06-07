@@ -8,15 +8,15 @@
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		{{-- <link rel="stylesheet" href="{{ asset('build/assets/app-BVsMBSNy.css') }}"> --}}
-		@vite('resources/css/nav_logo.css')
-		@vite('resources/css/landing.css')
+		{{-- @vite('resources/css/nav_logo.css')
+		@vite('resources/css/landing.css') --}}
 
 	</head>
 	<body>
 
 		<div class="nav">
 			<div class="logo_hold">
-				<a href="/encore"><img src="{{ asset("images/niit-logo.png") }}" class="logo"></a>
+				<a href="/encore"><img src="{{ asset("/images/niit-logo.png") }}" class="logo"></a>
 			</div>
 
 			<div class="encor">

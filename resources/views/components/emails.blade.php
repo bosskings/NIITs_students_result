@@ -62,7 +62,7 @@
             </p>
 
             <i>
-                For more informations: <a href="https://niitph.com"> niit-ph.com </a>
+                For more information: <a href="https://niitph.com"> niit-ph.com </a>
             </i>
         </section>
     </body>

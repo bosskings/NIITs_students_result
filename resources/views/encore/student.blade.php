@@ -85,7 +85,7 @@
 	</section>
 	
 
-	<script src="/js/result.js"></script>
+	{{-- <script src="/js/result.js"></script> --}}
 
 	{{-- @vite('resources/js/result.js') --}}
 
