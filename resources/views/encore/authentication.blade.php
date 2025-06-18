@@ -28,11 +28,11 @@
     @endif
 
 
-    {{-- @if(Auth::check())
-      <p>You are logged in as {{ Auth::user()->email }}</p>
+    @if(session('is_admin_authenticated'))
+      <p>You are logged in as {{ session('is_admin_authenticated') }}</p>
     @else 
-      <p>Logged out {{Auth::check()}} </p>
-    @endif --}}
+      <p>Logged out </p>
+    @endif
 
 
 		<form action="{{ route('login.auth') }}  " method="POST">

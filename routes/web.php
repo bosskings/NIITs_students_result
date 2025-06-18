@@ -17,17 +17,25 @@ Route::get('/about', function(){ return view('niit/about'); })->name('about');
 // route to go to the login page
 Route::get('/encore/auth', function(){
     return view('encore/authentication');
-})->name('login');
-
+})->name('encore.login');
 
 Route::post('/encore/auth', [AuthController::class, 'authentication'])->name('login.auth');
 
 
-Route::middleware(['web'])->group(function () {
+// route to test logout system
+Route::get('/logout', function(){
+
+    session(['is_admin_authenticated' => false]);
+    return redirect('/encore/auth');
+    
+});
+
+// authentication middleware starts
+Route::middleware('admin')->group(function () {
     
     Route::get('/encore', function () {
         return view("encore/index");
-    });
+    })->name('encore.index');
 
     //auto complete for the form 
     Route::get('/encore/studentSearch', [StudentDetailController::class, 'searchStudents'])->name('encore.searchStudents'); 
@@ -37,7 +45,7 @@ Route::middleware(['web'])->group(function () {
     // route to show the register page
     Route::get('/encore/register', [StudentDetailController::class, 'viewRegistration'])->name('encore.viewRegistration'); 
 
-    // for students registeration
+    // for students registration
     Route::post('/encore/register', [StudentDetailController::class, 'createStudents'])->name('encore.createStudents'); 
 
 

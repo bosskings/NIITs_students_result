@@ -2,44 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Auth\EncoreUser;
 use Illuminate\Auth\GenericUser;
 use Illuminate\Http\Request;
-use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    
-
-
     public function authentication(Request $request)
     {
-
         $username = $request->input('user_id');
         $password = $request->input('password');
         $hour = now()->hour;
 
         $validUsername = 'Encore@niit-ph.com';
-        $validPassword = 'Secret123-code#'.$hour;
+        $validPassword = 'Secret123-code#' . $hour;
 
         if ($username === $validUsername && $password === $validPassword) {
 
-            // Manually log in a "fake" user
-            $user = new GenericUser([
-                'id' => 1,
-                'name' => 'Encore',
-                'email' => $validUsername
+            session([
+                'is_admin_authenticated' => true,
+                'admin_authenticated_at' => now()
             ]);
-
-            Auth::login($user); // Logs in manually
-
-            error_log($username.$password);
-            return redirect('/encore');
+            return redirect()->route('encore.index');
         }
 
-        return back()->with('error', 'Invalid credentials'.$validPassword);
+        return back()->with('error', 'Invalid credentials '.$validPassword);
     }
-
-
-    
 }

@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
-use Illuminate\Bus\Batch;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use PhpParser\Node\Stmt\Return_;
+use Illuminate\Support\Facades\Storage;
 
 class StudentDetailController extends Controller
 {
-
     // function to view create a new student form
     public function viewRegistration(){
         
@@ -116,6 +113,25 @@ class StudentDetailController extends Controller
         $students->phone = request('phone');
         $students->reg_no = request('regNo');
         $students->batch_no = request('batchNo');
+
+
+        // for picture upload
+        
+        $data = request('snapshot');
+        
+
+        // Extract base64 data
+        preg_match("/^data:image\/(png|jpeg);base64,/", $data, $matches);
+        $imageType = $matches[1] ?? 'png';
+        $data = preg_replace('/^data:image\/\w+;base64,/', '', $data);
+        $data = str_replace(' ', '+', $data);
+        $imageData = base64_decode($data);
+
+        $filename = 'snapshot_' . time() . '.' . $imageType;
+        Storage::put("public/uploads/{$filename}", '$imageData');
+
+
+        return;
         
         if ($students->save()) {
             return redirect()->back()->with('success', 'Details saved successfully!');

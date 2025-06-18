@@ -24,9 +24,50 @@
 				</div>
 			@endif
 
-			<form method="POST" action="/encore/register"> 
+			<form method="POST" action="/encore/register" enctype="multipart/form-data"> 
 
 				@csrf
+
+
+				{{-- for snapshot --}}
+				
+				<video id="video" width="300" autoplay></video><br>
+				<button type="button" onclick="takeSnapshot()">Take Snapshot</button><br><br>
+			
+				<canvas id="canvas" width="300" height="0" style="display:none;"></canvas>
+				<input type="hidden" name="snapshot" id="snapshotInput">
+
+
+				<script>
+					const video = document.getElementById('video');
+					const canvas = document.getElementById('canvas');
+					const snapshotInput = document.getElementById('snapshotInput');
+				
+					// Get access to webcam
+					navigator.mediaDevices.getUserMedia({ video: true })
+						.then(stream => {
+							video.srcObject = stream;
+						})
+						.catch(err => {
+							alert("Unable to access camera: " + err.message);
+						});
+				
+					function takeSnapshot() {
+						const context = canvas.getContext('2d');
+						canvas.height = video.videoHeight;
+						canvas.width = video.videoWidth;
+						context.drawImage(video, 0, 0, canvas.width, canvas.height);
+				
+						// Convert to base64 string
+						const dataURL = canvas.toDataURL('image/png');
+						snapshotInput.value = dataURL;
+					}
+				</script>
+				
+				{{-- snapshot ends here --}}
+
+
+
 
 				<div class="form-group">
 					<label for="firstname">First Name:</label>

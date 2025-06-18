@@ -7,29 +7,30 @@
 
         <style>
             section{
+                
+                box-sizing:border-box;
+                padding:50px;
                 font-family: sans-serif;
                 font-size: 20px;
                 margin: auto;
-                width: 50%;
-                height: 50vh;
                 text-align: center;
                 border-radius: 10px;
                 /* background: #202020; */
                 color: white;
-                box-shadow: 2px 5px  12px rgba(0, 0, 0, 0.5);
-                padding:50px 10px;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://niit-ph.com/Images/Slider-1.jpg')
+                padding:50px 50px;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://niitph.com/images/Slider-3.jpeg');
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size:cover;
+                border:2px solid red;
+                text-align:left;
             }
 
-            div{
-                width: 120px;
-                margin:auto;
-                background: white
-            }
 
             section img{
 
                 width: 100px;
+                height: 100%;
             }
 
 
@@ -51,9 +52,8 @@
             
 
         <section>
-            <div>
-                <img src="https://niitph.com/images/niit/niit-logo.png" alt="NIITS atom logo">
-            </div>
+            <img src="https://niitph.com/images/niit/niit-logo.png" alt="NIITS atom logo">
+            
 
             <hr>
             <p>
@@ -62,7 +62,7 @@
             </p>
 
             <i>
-                For more information: <a href="https://niitph.com"> niit-ph.com </a>
+                For more information: <a href="https://niitph.com"> niitph.com </a>
             </i>
         </section>
     </body>
