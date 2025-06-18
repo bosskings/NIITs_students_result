@@ -117,21 +117,21 @@ class StudentDetailController extends Controller
 
         // for picture upload
         
-        $data = request('snapshot');
+        // $data = request('snapshot');
         
 
-        // Extract base64 data
-        preg_match("/^data:image\/(png|jpeg);base64,/", $data, $matches);
-        $imageType = $matches[1] ?? 'png';
-        $data = preg_replace('/^data:image\/\w+;base64,/', '', $data);
-        $data = str_replace(' ', '+', $data);
-        $imageData = base64_decode($data);
+        // // Extract base64 data
+        // preg_match("/^data:image\/(png|jpeg);base64,/", $data, $matches);
+        // $imageType = $matches[1] ?? 'png';
+        // $data = preg_replace('/^data:image\/\w+;base64,/', '', $data);
+        // $data = str_replace(' ', '+', $data);
+        // $imageData = base64_decode($data);
 
-        $filename = 'snapshot_' . time() . '.' . $imageType;
-        Storage::put("public/uploads/{$filename}", '$imageData');
+        // $filename = 'snapshot_' . time() . '.' . $imageType;
+        // Storage::put("public/uploads/{$filename}", '$imageData');
 
 
-        return;
+        // return;
         
         if ($students->save()) {
             return redirect()->back()->with('success', 'Details saved successfully!');
