@@ -9,7 +9,7 @@
 	<div class="search_wrapper">
 		<div class="search_container col-6 col-ld-9 col-esd-11">
 			
-			<form action="" id="searchForm" method="GET" class="search_container col-12">
+			<form action="/encore/showStudentsDetail" id="searchForm" method="POST" class="search_container col-12">
 
 				@csrf
 				<input class="search_bar col-10 col-ld-9 col-esd-10" type="text" name="search_string" placeholder="Student Details" autocomplete="off">

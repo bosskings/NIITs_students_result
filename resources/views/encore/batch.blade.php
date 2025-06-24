@@ -13,12 +13,14 @@
 
             {{-- check if any error is returned from trying to send multiple Emails --}}
             @if(session('success'))
-                <p class="alert alert-success">{{ session('success') }}</p>
+                <p style="text-align: center; color:green; font-size:20px">{{ session('success') }}</p>
             @endif
 
             @if(session('error'))
                 
-                <p class="alert alert-danger">{{ implode(', ', session('error'))." the following email(s) were not sent"; }}</p>
+                <p style="text-align: center; color:red; font-size:20px">
+                    {{ implode(', ', session('error'))." the following email(s) were not sent"; }}
+                </p>
                 
             @endif
 

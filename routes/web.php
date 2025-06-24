@@ -49,6 +49,12 @@ Route::middleware('admin')->group(function () {
     Route::post('/encore/register', [StudentDetailController::class, 'createStudents'])->name('encore.createStudents'); 
 
 
+    // route to update students details
+    Route::post('/encore/showStudentsDetail', [StudentDetailController::class, 'showStudentsDetail'])->name('encore.showStudentsDetail');
+
+    // route to help change / modify students detail
+    Route::get('/encore/updateStudents', [StudentDetailController::class, 'updateStudents'])->name('encore.updateStudents');
+
 
     // route to show details of single student
     Route::get('/encore/profile/{id}', [StudentDetailController::class, 'studentsProfile'])->name('encore.studentsProfile'); 

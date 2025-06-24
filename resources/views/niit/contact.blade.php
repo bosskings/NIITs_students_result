@@ -57,7 +57,7 @@
           <li><a href="{{ route('diploma') }}">Diploma</a></li>
           <li><a href="{{ route('about') }}">About Us</a></li>
           <li><a href="{{ route('contact') }}" style="color: #f9b689;">Contact Us</a></li>
-          <li><a href="{{ route('login') }}">Account</a></li>
+          <li><a href="{{ route('encore.login') }}">Account</a></li>
         </div>
       </ul>
     </section>
@@ -82,7 +82,7 @@
               <li><a href="{{ route('contact') }}" style="color: #f9b689;">Contact us</a></li>
             </div>
             <div class="nav-sub">
-              <li> <i class="fa-solid fa-user pe-2"></i><a href="{{ route('login') }}">Account</a></li>
+              <li> <i class="fa-solid fa-user pe-2"></i><a href="{{ route('encore.login') }}">Account</a></li>
               <div class="search">
                 <input type="text" placeholder="search...">
                 <a href="" id="search">

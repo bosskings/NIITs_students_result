@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
+use Error;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+
+use function Laravel\Prompts\error;
 
 class StudentDetailController extends Controller
 {
@@ -115,24 +118,6 @@ class StudentDetailController extends Controller
         $students->batch_no = request('batchNo');
 
 
-        // for picture upload
-        
-        // $data = request('snapshot');
-        
-
-        // // Extract base64 data
-        // preg_match("/^data:image\/(png|jpeg);base64,/", $data, $matches);
-        // $imageType = $matches[1] ?? 'png';
-        // $data = preg_replace('/^data:image\/\w+;base64,/', '', $data);
-        // $data = str_replace(' ', '+', $data);
-        // $imageData = base64_decode($data);
-
-        // $filename = 'snapshot_' . time() . '.' . $imageType;
-        // Storage::put("public/uploads/{$filename}", '$imageData');
-
-
-        // return;
-        
         if ($students->save()) {
             return redirect()->back()->with('success', 'Details saved successfully!');
         } else {
@@ -141,6 +126,47 @@ class StudentDetailController extends Controller
     }
 
 
+
+    // function to update students record
+    public function showStudentsDetail(Request $request){
+
+        $course = strtolower($request->search_string);
+
+        // search for last 150 courses that match search string with empty reg no and batch number columns 
+        $students = StudentDetail::orderByDesc('id')
+            ->limit(100)
+            ->where('course', 'LIKE', "%{$course}%")
+            ->get();
+
+            // fuse it into  a blade template and display  
+            return view('encore.updateStudentsRecords', compact('students') );
+
+    }
+
+    // function to update students details with inputs provided by ajax
+    public function updateStudents(Request $request){
+        
+        $code = $request->input('query1');
+        $userId = $request->input('query2');
+        $type = $request->input('query3');
+
+
+        $student = StudentDetail::find($userId);
+
+        if($student){
+
+            $student->$type = $code;
+            $student->save();
+
+
+            return response()->json(['message' => 'success']);
+
+        }else{
+
+            return response()->json(['message' => 'error'], 404);
+        }
+
+    }
 
 
     // function to search for students profile
@@ -157,8 +183,7 @@ class StudentDetailController extends Controller
                 $q->whereRaw('LOWER(first_name) LIKE ?', ["%$query%"])
                 ->orWhereRaw('LOWER(middle_name) LIKE ?', ["%$query%"])
                 ->orWhereRaw('LOWER(last_name) LIKE ?', ["%$query%"])
-                ->orWhereRaw('LOWER(email) LIKE ?', ["%$query%"])
-                ->orWhereRaw('LOWER(course) LIKE ?', ["%$query%"]);
+                ->orWhereRaw('LOWER(email) LIKE ?', ["%$query%"]);
             })->get();
         
             
