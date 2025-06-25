@@ -29,6 +29,10 @@
 	font-weight: normal;
 }
 
+sup{
+	border-right: 1px solid grey;
+}
+
 body {
 	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),url('/images/bg.jpg');
 	background-size: cover;

@@ -23,7 +23,15 @@ $('.search_bar').on('keyup', function() {
                             
                             $('.search_result').css('display', 'block');
 
-                            $('.search_result').append('<a href="/encore/profile/'+student.id+'"><div>' + student.first_name + student.id + '</div> </a>');
+                            $('.search_result').append(`
+                                <a href="/encore/profile/"${student.id}>
+                                    <div> ${student.first_name}  ${student.last_name} 
+                                        <sup> ${student.reg_no} </sup>  
+                                        <sup>${student.batch_no} </sup> 
+                                        <sup>${student.course} </sup> 
+                                    </div> 
+                                </a>
+                            `);
                             
                         
                             // set the form action to redirect to the students profile view
@@ -39,7 +47,14 @@ $('.search_bar').on('keyup', function() {
 
                         $('.search_result').css('display', 'block');
 
-                        $('.search_result').append('<a href="/encore/batch/'+ data.batch_no +'"><div> <b>Batch:</b> ' + data.course + ' - <b> Start Date </b>'+ data.start_date+' </div> </a>');
+                        $('.search_result').append(`
+                            <a href="/encore/batch/" ${data.batch_no}>
+                                <div> 
+                                    <b> Start Date : </b> <sup>  ${data.start_date} </sup>-
+                                    <b> Course : </b> <sup>  ${data.course} </sup>
+                                </div> 
+                            </a>
+                        `);
                                 
                         // set the form action to redirect to the batch view
                         form.action = '/encore/batch/';

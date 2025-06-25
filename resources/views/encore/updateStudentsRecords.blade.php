@@ -35,7 +35,7 @@
                             <input type="text" placeholder="{{$students[$i]->id}}" value="{{ $students[$i]->reg_no }}" title="reg_no" id="regNo">
                             <input type="text" placeholder="{{$students[$i]->id}}" value="{{ $students[$i]->batch_no }}" title="batch_no" id="batchNo">
 
-                            <i id="mssg{{$students[$i]->id}}" style="display:none; font-weight: bolder; height:10px;">.</i>
+                            <i id="mssg{{$students[$i]->id}}" style="display:none; font-weight: bolder; height:10px;"></i>
                             
                         </div>
                     

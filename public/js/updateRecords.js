@@ -26,7 +26,7 @@ updateRecords = (element) => {
                         document.querySelector('#mssg'+element.target.placeholder).style.display = 'inline';
                         document.querySelector('#mssg'+element.target.placeholder).style.background = 'red'
                     }
-                    console.log(data.message);
+                    // console.log(data.message);
                 }
 
             })
