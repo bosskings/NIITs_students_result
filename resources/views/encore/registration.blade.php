@@ -36,7 +36,7 @@
 
 				<div class="form-group">
 					<label for="middlename">Middle Name:</label>
-					<input name="middleName" class="col-12" type="text" id="middlename" placeholder="Enter student middle name" maxlength="100" required>
+					<input name="middleName" class="col-12" type="text" id="middlename" placeholder="Enter student middle name" maxlength="100">
 				</div>
 
 
@@ -76,12 +76,12 @@
 
 				<div class="form-group">
 					<label for="phone">Your Phone:</label>
-					<input  name="phone" class="col-12" type="tel" id="phone" placeholder="Enter student phone number" required maxlength="15" required>
+					<input  name="phone" class="col-12" type="tel" id="phone" placeholder="Enter student phone number" maxlength="15" required>
 				</div>
 
 				<div class="form-group">
 					<label for="Guardian_Phone">Guardian Phone:</label>
-					<input  name="guardianPhone" class="col-12" type="tel" id="Guardian_Phone" placeholder="Enter Guardian phone number" required maxlength="15" required>
+					<input  name="guardianPhone" class="col-12" type="tel" id="Guardian_Phone" placeholder="Enter Guardian phone number" maxlength="15">
 				</div>
 
 
@@ -205,12 +205,12 @@
 
 				<div class="form-group">
 					<label for="batch_no">Batch No:</label>
-					<input name="batchNo" class="col-12" type="text" id="batch_no" placeholder="Enter student batch number" required>
+					<input name="batchNo" class="col-12" type="text" id="batch_no" placeholder="Enter student batch number">
 				</div>
 
 				<div class="form-group">
 					<label for="reg_no">Registration No:</label>
-					<input name="regNo" class="col-12" type="text" id="reg_no" placeholder="Enter student registration number" required>
+					<input name="regNo" class="col-12" type="text" id="reg_no" placeholder="Enter student registration number">
 				</div>
 
 				<div class="form-group">
