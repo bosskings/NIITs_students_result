@@ -205,12 +205,12 @@
 
 				<div class="form-group">
 					<label for="batch_no">Batch No:</label>
-					<input name="batchNo" class="col-12" type="text" id="batch_no" placeholder="Enter student batch number">
+					<input name="batchNo" class="col-12" type="text" id="batch_no" placeholder="Enter student batch number" value="B">
 				</div>
 
 				<div class="form-group">
 					<label for="reg_no">Registration No:</label>
-					<input name="regNo" class="col-12" type="text" id="reg_no" placeholder="Enter student registration number">
+					<input name="regNo" class="col-12" type="text" id="reg_no" placeholder="Enter student registration number" value="RE">
 				</div>
 
 				<div class="form-group">
