@@ -51,6 +51,7 @@ Route::middleware('admin')->group(function () {
 
     // route to update students details
     Route::post('/encore/showStudentsDetail', [StudentDetailController::class, 'showStudentsDetail'])->name('encore.showStudentsDetail');
+    Route::get('/encore/showStudentsDetail', [StudentDetailController::class, 'showStudentsDetail'])->name('encore.showStudentsDetail');
 
     // route to help change / modify students detail
     Route::get('/encore/updateStudents', [StudentDetailController::class, 'updateStudents'])->name('encore.updateStudents');

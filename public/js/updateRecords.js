@@ -7,7 +7,7 @@ updateRecords = (element) => {
     
     clearTimeout(timeout);
     timeout = setTimeout(function() {
-        if(element.target.value.length > 5) { // Trigger search only if input length > 5
+        if(element.target.value.length > 4) { // Trigger search only if input length > 5
             
             
             $.ajax({
@@ -20,10 +20,10 @@ updateRecords = (element) => {
                 },
                 success: function(data) {
                     if(data.message == 'success'){
-                        document.querySelector('#mssg'+element.target.placeholder).style.display = 'inline';
+                        document.querySelector('#mssg'+element.target.placeholder).style.display = 'inline-block';
                         document.querySelector('#mssg'+element.target.placeholder).style.background = 'green'
                     }else{
-                        document.querySelector('#mssg'+element.target.placeholder).style.display = 'inline';
+                        document.querySelector('#mssg'+element.target.placeholder).style.display = 'inline-block';
                         document.querySelector('#mssg'+element.target.placeholder).style.background = 'red'
                     }
                     // console.log(data.message);

@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Mail\sendStudentResult;
 use App\Models\StudentDetail;
-use Error;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Storage;
 
-use function Laravel\Prompts\error;
 
 class StudentDetailController extends Controller
 {
@@ -129,15 +126,17 @@ class StudentDetailController extends Controller
 
     // function to update students record
     public function showStudentsDetail(Request $request){
-
+        
         $course = strtolower($request->search_string);
 
         // search for last 150 courses that match search string with empty reg no and batch number columns 
+        
         $students = StudentDetail::orderByDesc('id')
             ->limit(100)
             ->where('course', 'LIKE', "%{$course}%")
             ->get();
 
+        
             // fuse it into  a blade template and display  
             return view('encore.updateStudentsRecords', compact('students') );
 
@@ -146,13 +145,13 @@ class StudentDetailController extends Controller
     // function to update students details with inputs provided by ajax
     public function updateStudents(Request $request){
         
+        
         $code = $request->input('query1');
         $userId = $request->input('query2');
         $type = $request->input('query3');
-
-
+        
         $student = StudentDetail::find($userId);
-
+        
         if($student){
 
             $student->$type = $code;

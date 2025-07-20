@@ -20,26 +20,32 @@
                 
             @endif
 
-
             <form action="/encore" method="GET" >
 
                 @csrf
                 
                 <div class="scores">
                     
-                    @for ($i = 0; $i < count($students); $i++)
-                        
-                        <div class="item">   
-                            <b style="float: left">{{$i+1}}</b> 
-                            <span>{{ $students[$i]->first_name ." ". $students[$i]->middle_name ." ". $students[$i]->last_name }}</span>
-                            <input type="text" placeholder="{{$students[$i]->id}}" value="{{ $students[$i]->reg_no }}" title="reg_no" id="regNo">
-                            <input type="text" placeholder="{{$students[$i]->id}}" value="{{ $students[$i]->batch_no }}" title="batch_no" id="batchNo">
-
-                            <i id="mssg{{$students[$i]->id}}" style="display:none; font-weight: bolder; height:10px;"></i>
-                            
-                        </div>
+                    @if (count($students) > 0)
                     
-                    @endfor
+                        @for ($i = 0; $i < count($students); $i++)
+                            
+                            <div class="item">   
+                                <b style="float: left">{{$i+1}}</b> 
+                                <span>{{ $students[$i]->first_name ." ". $students[$i]->middle_name ." ". $students[$i]->last_name }}</span>
+                                <input type="text" placeholder="{{ $students[$i]->id }}" value="{{ $students[$i]->reg_no ?: 'RE' }}" title="reg_no" id="regNo">
+                                <input type="text" placeholder="{{ $students[$i]->id}}" value="{{ $students[$i]->batch_no ?: 'B' }}" title="batch_no" id="batchNo">
+
+                                <i id="mssg{{$students[$i]->id}}" style="display:none; font-weight: bolder; height:10px; border-radius:100px;  padding:2px; color:greenyellow">.</i>
+                                
+                            </div>
+                        
+                        @endfor
+
+                    @else
+                        <p style="color: orange;" >No records to display yet!</p>
+                    @endif
+
 
 
                 </div>
