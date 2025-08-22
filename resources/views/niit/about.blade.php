@@ -804,7 +804,8 @@
       <div class="parentDiv col-12">
         <div class="shr">
           <h2>Reach Us</h2>
-          <p>(+234) 806 962 5113</p>
+          <p>+234-915-3110-525</p>
+          <p>+234-806-9625-113</p>
           <p>niitportharcourtinquires @gmail.com</p>
           <p>1 Kaduna Street, Port Harcourt, Nigeria</p>
         </div>
@@ -812,7 +813,7 @@
         <div>
           <h2>Company</h2>
           <p> <a href="{{ route('about') }}">About us</a></p>
-          <p> <a href="{{ route('contact') }}">Contact Us</a></p>
+          <p> <a href="{{ route('about') }}">Contact Us</a></p>
         </div>
 
         <div>

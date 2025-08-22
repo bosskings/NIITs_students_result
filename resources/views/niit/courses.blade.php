@@ -124,6 +124,19 @@
     </div>
 
 
+    <div class="parent reveal col-md-3 col-sm-12" id="book">
+      <div class="child col-12">
+        <div class="pics"><img src="/images/niit/Courses/web.jpg" alt="" width="100%" height="100%"></div>
+        <div class="prog-p">
+          <div class="program">Web Development</div>
+          <div class="textimage px-lg-5 px-sm-0">Web development is the process of building and maintaining websites and web applications. 
+            It's a 6-month journey that encompasses various tasks, including web design (which takes 4 months of that duration), 
+            web content development, client-side/server-side scripting, and network security configuration. The overall goal of web development 
+            is to create functional, user-friendly, and secure online experiences.</div>
+        </div>
+
+      </div>
+    </div>
 
 
     <div class="parent reveal col-md-3 col-sm-12" id="book">
@@ -133,13 +146,29 @@
           <div class="program">Java</div>
           <div class="textimage px-lg-5 px-sm-0">In the I.T INDUSTRY, the program covers concepts of Core Java programming
             setting a foundation for other editions of the programming language. It trains learners to design
-            application software for both deskiop and server envirionments using Java. The programme can be taken up for
+            application software for both desktop and server environments using Java. The programme can be taken up for
             School learners for curriculum support or by college learning of Engineering subjects for thorough
-            understanding of Java skills or prparing for jobs and Java developer.</div>
+            understanding of Java skills or preparing for jobs and Java developer.</div>
         </div>
 
       </div>
     </div>
+
+
+    <div class="parent reveal col-md-3 col-sm-12" id="book">
+      <div class="child col-12">
+        <div class="pics"><img src="/images/niit/Courses/cyber.jpg" alt="" width="100%" height="100%"></div>
+        <div class="prog-p">
+          <div class="program">Cyber Security</div>
+          <div class="textimage px-lg-5 px-sm-0">The 5-month CompTIA Security+ & Cybersecurity program is a comprehensive training that 
+            provides practical and foundational guidance on identifying threats, managing security, and implementing secure system designs. 
+            Its overall goal is to equip students to protect data and prevent data leaks through robust security architectures..</div>
+        </div>
+
+      </div>
+    </div>
+
+
 
     <div class="parent reveal col-md-3 col-sm-12">
       <div class="child col-12">
@@ -162,7 +191,7 @@
           <div class="program">Mobile App Development on Android</div>
           <div class="textimage px-lg-5 px-sm-0">Program focuses on application level APLs and imparts skills to develop
             users and data-centric mobile app and utilities on the android platform. Skills in android app development,
-            working with graphics, multi media, conectivity and location-based services. Learn to debug, deploy and test
+            working with graphics, multi media, connectivity and location-based services. Learn to debug, deploy and test
             mobile application.</div>
         </div>
 
@@ -174,11 +203,11 @@
         <div class="pics"><img src="/images/niit/Courses/PS.jpeg" alt="" width="100%" height="100%"></div>
         <div class="prog-p">
           <div class="program">PhotoShop</div>
-          <div class="textimage px-lg-5 px-sm-0">Grapic Design skills are a hot commodity for creative workers wnho enjoy
-            using the right side of their brain. Sure, grapgic design jobs are stimmulating and fun, but they are also
+          <div class="textimage px-lg-5 px-sm-0">Graphic Design skills are a hot commodity for creative workers wnho enjoy
+            using the right side of their brain. Sure, graphic design jobs are stimulating and fun, but they are also
             potentially lucrative. Top performers earn almost $37 per hour, according to the Monster data. In addition,
             graphic designers who climb their way to the position of art director- the person who is responsible for the
-            visual style and images in the magazines, newspapers, product packaging, moviesand TV shows- make a median
+            visual style and images in the magazines, newspapers, product packaging, movies and TV shows- make a median
             salary of more than $83,000 per year.</div>
         </div>
 
@@ -190,9 +219,9 @@
         <div class="pics"><img src="/images/niit/Courses/Analytics.jpeg" alt="" width="100%" height="100%"></div>
         <div class="prog-p">
           <div class="program">Analytics</div>
-          <div class="textimage px-lg-5 px-sm-0">Research shows that data cleaning and preperation accounts for around 80%
+          <div class="textimage px-lg-5 px-sm-0">Research shows that data cleaning and preparation accounts for around 80%
             of the work of data professionals. This makes it perhaps the key skill for anyone serious about getting a
-            job in data. Commonly a data analyst will need to retieve data from one or more sources and prepare the data
+            job in data. Commonly a data analyst will need to retrieve data from one or more sources and prepare the data
             so it is ready for the numerical and categorical analysis. Data cleaning also involves handling missing and
             inconsistent data that may affect your analysis. </div>
         </div>
@@ -208,7 +237,7 @@
           <div class="textimage px-lg-5 px-sm-0">As more and more data is available to businesses, they require
             professionals with the skill to break it down: Demand for big data staff is continuing to grow by up to 29%
             per annum (Tech Target 2019). Throughout our online MBA with data analytics. You will gain an understanding
-            of the entire life cycle of big data: <br> Capturing, organising, analysing, drawing conclusion and taking
+            of the entire life cycle of big data: <br> Capturing, organizing, analyzing, drawing conclusion and taking
             strategic actions to gain leverage or a competitive advantage... </div>
         </div>
 
@@ -220,8 +249,8 @@
         <div class="pics"><img src="/images/niit/Courses/cisco.jpeg" alt="" width="100%" height="100%"></div>
         <div class="prog-p">
           <div class="program">Cisco</div>
-          <div class="textimage px-lg-5 px-sm-0">Acheiving CCNA certification si the first step for preparing for a career
-            in IT technologies. To earn CCNA certification, you pass one exam that covers a broad rangge of fundamentals
+          <div class="textimage px-lg-5 px-sm-0">Achieving CCNA certification si the first step for preparing for a career
+            in IT technologies. To earn CCNA certification, you pass one exam that covers a broad range of fundamentals
             for IT careers, based on the latest networking technologies, software development skills and job roles. CCNA
             gives you the foundation you need to take your career in any direction.</div>
         </div>
@@ -249,8 +278,8 @@
         <div class="pics"><img src="/images/niit/Courses/ITIL.jpeg" alt="" width="100%" height="100%"></div>
         <div class="prog-p">
           <div class="program">ITIL</div>
-          <div class="textimage px-lg-5 px-sm-0">ITIL is a set of practices that imparts pratical and strategic ITSM
-            guidiance. (The latest version is ITIL 4) ITIL is used as a guide to help groups improve the value of their
+          <div class="textimage px-lg-5 px-sm-0">ITIL is a set of practices that imparts practical and strategic ITSM
+            guidance. (The latest version is ITIL 4) ITIL is used as a guide to help groups improve the value of their
             services by focusing on co-creating business values and solving business issues, rather than just improving
             IT capabilities. Image result for ABOUT ITIL As a service management framework, the overall goal of ITIL is
             to improve service management and optimize values for your customers and your organization.</div>
@@ -264,11 +293,11 @@
         <div class="pics"><img src="/images/niit/Courses/DevposEng.jpeg" alt="" width="100%" height="100%"></div>
         <div class="prog-p">
           <div class="program">Microsoft Certified System Engineer</div>
-          <div class="textimage px-lg-5 px-sm-0">Microsoft Certified System Certificatopn Program also known as MCSE is one
+          <div class="textimage px-lg-5 px-sm-0">Microsoft Certified System Certification Program also known as MCSE is one
             among the popular certifications offered by Microsoft under the Microsoft Certifies Professional
-            Certificaton. Microsoft Certified System Engineer program is a 2 - 5months certification level Information
+            Certification. Microsoft Certified System Engineer program is a 2 - 5months certification level Information
             Technology course. While pursuing the course, candidates will be introduced to the following areas
-            regaerdong Mircrosoft Windows operating system related desktop system, networking and Microsoft office
+            regarding Mircrosoft Windows operating system related desktop system, networking and Microsoft office
             served products. </div>
         </div>
 
@@ -281,8 +310,8 @@
         <div class="prog-p">
           <div class="program">Networking</div>
           <div class="textimage px-lg-5 px-sm-0">This is a course on how to install, upgrade, repair, configure, optimize,
-            troubleshooting and perform preventive, maintainance on basic PC hardware and OS. Also, will help
-            identifying and describing all the major networking technologies, systems, skills and tools used in mordern
+            troubleshooting and perform preventive, maintenance on basic PC hardware and OS. Also, will help
+            identifying and describing all the major networking technologies, systems, skills and tools used in modern
             PC-based computer networks. </div>
         </div>
 
@@ -316,8 +345,8 @@
     </div>
     <div class="col-md-6 txt col-sm-12">
       <h1>The excellent course place for you</h1>
-      Revolutionary ICT learning through modern technology and quality service delivery. We aim at equipping a ddynamic
-      society through ICT enhanced knowledge and ensuring enterpreneurship and self-reliance.
+      Revolutionary ICT learning through modern technology and quality service delivery. We aim at equipping a dynamic
+      society through ICT enhanced knowledge and ensuring entrepreneurship and self-reliance.
       <p>
       <div class="col-10 circ-d">
         <div class="circle"></div> Creative study patterns
@@ -401,7 +430,7 @@
             <div class="ms-2">
               <h3 class="h4 card-title">Call</h3>
 
-              <p class="card-text">+234-915-311-0525</p>
+              <p class="card-text">+234-915-3110-525</p>
             </div>
 
           </div>
@@ -458,7 +487,8 @@
       <div class="parentDiv col-12">
         <div class="shr">
           <h2>Reach Us</h2>
-          <p>(+234) 806 962 5113</p>
+          <p>+234-915-3110-525</p>
+          <p>+234-806-9625-113</p>
           <p>niitportharcourtinquires @gmail.com</p>
           <p>1 Kaduna Street, Port Harcourt, Nigeria</p>
         </div>
